@@ -38,10 +38,10 @@ class UserLayout extends Component {
             <div className={styles.top}>
               <div className={styles.header}>
                 <Link to="/">
-                  <span className={styles.title}>Cello Dashboard</span>
+                  <span className={styles.title}>Hadamard Hyperledger Dashboard</span>
                 </Link>
               </div>
-              <div className={styles.desc}>Dashboard for management cello service</div>
+              <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
             </div>
             {children}
           </div>
