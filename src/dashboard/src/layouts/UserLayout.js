@@ -8,7 +8,7 @@ import styles from './UserLayout.less';
 
 const links = [];
 
-const copyright = <Fragment>Hadamard</Fragment>;
+const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
 
 class UserLayout extends Component {
   componentDidMount() {
