@@ -8,7 +8,7 @@ import styles from './UserLayout.less';
 
 const links = [];
 
-const copyright = <Fragment>Cello</Fragment>;
+const copyright = <Fragment>Hadamard</Fragment>;
 
 class UserLayout extends Component {
   componentDidMount() {
@@ -38,7 +38,7 @@ class UserLayout extends Component {
             <div className={styles.top}>
               <div className={styles.header}>
                 <Link to="/">
-                  <span className={styles.title}>Hadamard Hyperledger Dashboard</span>
+                  <span className={styles.title}>Hadamard Dashboard</span>
                 </Link>
               </div>
               <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
