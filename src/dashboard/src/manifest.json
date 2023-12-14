@@ -1,6 +1,6 @@
 {
-  "name": "Cello Dashboard",
-  "short_name": "Cello Dashboard",
+  "name": "Hadamard Dashboard",
+  "short_name": "Hadamard Dashboard",
   "display": "standalone",
   "start_url": "./?utm_source=homescreen",
   "theme_color": "#002140",
