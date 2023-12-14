@@ -1,4 +1,3 @@
-import React, { PureComponent } from 'react';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import React, { useState, useEffect } from "react";
 import {loadStripe} from '@stripe/stripe-js';
