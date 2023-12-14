@@ -1,4 +1,3 @@
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import React, { useState, useEffect } from "react";
 import {loadStripe} from '@stripe/stripe-js';
 import {
@@ -14,14 +13,9 @@ import {
 
 import "./App.css";
 
-
-class Index extends PureComponent {
-  render() {
-    return <PageHeaderWrapper>Payments</PageHeaderWrapper>;
-  }
-}
-
-
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+// This is your test public API key.
 const stripePromise = loadStripe("pk_test_51NxABWG9TKiSYMBE6R9ITIi99Jn9e6e18LLmPnLMYfCzMCeKdPGqDtPkgTgTlPjlUWyCjAxdDC6k7GcwpcgUeqWD00RBpStmwn");
 
 const CheckoutForm = () => {
@@ -101,10 +95,4 @@ const App = () => {
   )
 }
 
-
-
-
-
-
-
-export default Index;
+export default index;
