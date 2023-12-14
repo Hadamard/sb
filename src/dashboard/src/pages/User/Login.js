@@ -136,7 +136,7 @@ class LoginPage extends Component {
                       message: intl.formatMessage({ id: 'validation.orgName.required' }),
                     },
                     {
-                      pattern: new RegExp('^[a-z\\d]{1,62}$'),
+                      pattern: new RegExp('^[a-z][\\da-z]{0,61}\\.[a-z\\d]{1,62}\\.[a-z]{1,6}$'),
                       message: intl.formatMessage({ id: 'validation.orgName.check' }),
                     },
                   ]}
