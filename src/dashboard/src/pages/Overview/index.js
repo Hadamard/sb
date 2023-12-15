@@ -1,68 +1,255 @@
-import {
-  PaymentElement,
-  LinkAuthenticationElement
-} from '@stripe/react-stripe-js'
-import {useState} from 'react'
-import {useStripe, useElements} from '@stripe/react-stripe-js';
+import * from "react-chartjs-2";
+import React, { Component } from 'react';
 
-export default function CheckoutForm() {
-  const stripe = useStripe();
-  const elements = useElements();
-  const [message, setMessage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!stripe || !elements) {
-      // Stripe.js has not yet loaded.
-      // Make sure to disable form submission until Stripe.js has loaded.
-      return;
-    }
-
-    setIsLoading(true);
-
-    const { error } = await stripe.confirmPayment({
-      elements,
-      confirmParams: {
-        // Make sure to change this to your payment completion page
-        return_url: `${window.location.origin}/completion`,
-      },
+function getRandomArray(numItems) {
+  // Create random array of objects
+  let names = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let data = [];
+  for(var i = 0; i < numItems; i++) {
+    data.push({
+      label: names[i],
+      value: Math.round(20 + 80 * Math.random())
     });
+  }
+  return data;
+}
 
-    // This point will only be reached if there is an immediate error when
-    // confirming the payment. Otherwise, your customer will be redirected to
-    // your `return_url`. For some payment methods like iDEAL, your customer will
-    // be redirected to an intermediate site first to authorize the payment, then
-    // redirected to the `return_url`.
-    if (error.type === "card_error" || error.type === "validation_error") {
-      setMessage(error.message);
-    } else {
-      setMessage("An unexpected error occured.");
-    }
+function getRandomDateArray(numItems) {
+  // Create random array of objects (with date)
+  let data = [];
+  let baseTime = new Date('2018-05-01T00:00:00').getTime();
+  let dayMs = 24 * 60 * 60 * 1000;
+  for(var i = 0; i < numItems; i++) {
+    data.push({
+      time: new Date(baseTime + i * dayMs),
+      value: Math.round(20 + 80 * Math.random())
+    });
+  }
+  return data;
+}
 
-    setIsLoading(false);
+function getData() {
+  let data = [];
+
+  data.push({
+    title: 'Visits',
+    data: getRandomDateArray(150)
+  });
+
+  data.push({
+    title: 'Categories',
+    data: getRandomArray(20)
+  });
+
+  data.push({
+    title: 'Categories',
+    data: getRandomArray(10)
+  });
+
+  data.push({
+    title: 'Data 4',
+    data: getRandomArray(6)
+  });
+
+  return data;
+}
+
+
+// BarChart
+class BarChart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.canvasRef = React.createRef();
   }
 
-  return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <LinkAuthenticationElement id="link-authentication-element"
-        // Access the email value like so:
-        // onChange={(event) => {
-        //  setEmail(event.value.email);
-        // }}
-        //
-        // Prefill the email field like so:
-        // options={{defaultValues: {email: 'foo@bar.com'}}}
-        />
-      <PaymentElement id="payment-element" />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-        </span>
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
-    </form>
-  )
+  componentDidUpdate() {
+    this.myChart.data.labels = this.props.data.map(d => d.label);
+    this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
+    this.myChart.update();
+  }
+
+  componentDidMount() {
+    this.myChart = new Chart(this.canvasRef.current, {
+      type: 'bar',
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                min: 0,
+                max: 100
+              }
+            }
+          ]
+        }
+      },
+      data: {
+        labels: this.props.data.map(d => d.label),
+        datasets: [{
+          label: this.props.title,
+          data: this.props.data.map(d => d.value),
+          backgroundColor: this.props.color
+        }]
+      }
+    });
+  }
+
+  render() {
+    return (
+        <canvas ref={this.canvasRef} />
+    );
+  }
 }
+
+
+// LineChart
+class LineChart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.canvasRef = React.createRef();
+  }
+
+  componentDidUpdate() {
+    this.myChart.data.labels = this.props.data.map(d => d.time);
+    this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
+    this.myChart.update();
+  }
+
+  componentDidMount() {
+    this.myChart = new Chart(this.canvasRef.current, {
+      type: 'line',
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [
+            {
+              type: 'time',
+              time: {
+                unit: 'week'
+              }
+            }
+          ],
+          yAxes: [
+            {
+              ticks: {
+                min: 0
+              }
+            }
+          ]
+        }
+      },
+      data: {
+        labels: this.props.data.map(d => d.time),
+        datasets: [{
+          label: this.props.title,
+          data: this.props.data.map(d => d.value),
+          fill: 'none',
+          backgroundColor: this.props.color,
+          pointRadius: 2,
+          borderColor: this.props.color,
+          borderWidth: 1,
+          lineTension: 0
+        }]
+      }
+    });
+  }
+
+  render() {
+    return <canvas ref={this.canvasRef} />;
+  }
+}
+
+
+// Doughnut
+class DoughnutChart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.canvasRef = React.createRef();
+  }
+
+  componentDidUpdate() {
+    this.myChart.data.labels = this.props.data.map(d => d.label);
+    this.myChart.data.datasets[0].data = this.props.data.map(d => d.value);
+    this.myChart.update();
+  }
+
+  componentDidMount() {
+    this.myChart = new Chart(this.canvasRef.current, {
+      type: 'doughnut',
+      options: {
+        maintainAspectRatio: false
+      },
+      data: {
+        labels: this.props.data.map(d => d.label),
+        datasets: [{
+          data: this.props.data.map(d => d.value),
+          backgroundColor: this.props.colors
+        }]
+      }
+    });
+
+  }
+
+
+  render() {
+    return <canvas ref={this.canvasRef} />;
+  }
+}
+
+
+// App
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: getData()
+    };
+  }
+
+  componentDidMount() {
+    window.setInterval(() => {
+      this.setState({
+        data: getData()
+      })
+    }, 5000)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="main chart-wrapper">
+          <LineChart
+            data={this.state.data[0].data}
+            title={this.state.data[0].title}
+            color="#3E517A"
+          />
+        </div>
+        <div className="sub chart-wrapper">
+          <BarChart
+            data={this.state.data[1].data}
+            title={this.state.data[1].title}
+            color="#70CAD1"
+          />
+        </div>
+        <div className="sub chart-wrapper">
+          <BarChart
+            data={this.state.data[2].data}
+            title={this.state.data[2].title}
+            color="#B08EA2"
+          />
+        </div>
+        <div className="sub chart-wrapper">
+          <DoughnutChart
+            data={this.state.data[3].data}
+            title={this.state.data[3].title}
+            colors={['#a8e0ff', '#8ee3f5', '#70cad1', '#3e517a', '#b08ea2', '#BBB6DF']}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
