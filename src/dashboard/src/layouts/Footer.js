@@ -9,7 +9,7 @@ const FooterView = () => (
     <GlobalFooter
       copyright={
         <Fragment>
-          Copyright <CopyrightOutlined /> Hadamard Corp., All Rights Reserved.
+          Copyright <CopyrightOutlined /> Hadamard Corp.
         </Fragment>
       }
     />
