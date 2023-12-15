@@ -64,7 +64,17 @@ const LineChart = () => {
     }
   };
 
-  return <Line data={data} options={options} />;
+ return (
+    <div style={{
+      backgroundColor: '#2E2E2E', // Dunkelgraue Hintergrundfarbe
+      borderRadius: '15px', // Abgerundete Ecken
+      padding: '20px', // Innerer Abstand
+      maxWidth: '600px', // Maximale Breite der Box
+      margin: 'auto' // Zentriert die Box
+    }}>
+      <Line data={data} options={options} />
+    </div>
+  );
 };
 
 export default LineChart;
