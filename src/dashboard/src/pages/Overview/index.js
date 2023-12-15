@@ -1,5 +1,27 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+
+function CheckoutForm() {
+  const stripe = useStripe();
+  const elements = useElements();
+
+  // Behandlung der Formular\u00fcbermittlung ...
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <CardElement />
+      <button type="submit" disabled={!stripe}>
+        Jetzt bezahlen
+      </button>
+    </form>
+  );
+}
+
+
+
+
+
 
 const BarChart = () => {
   const data = {
