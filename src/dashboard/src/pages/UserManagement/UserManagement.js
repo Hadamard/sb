@@ -90,7 +90,183 @@ const CreateUpdateForm = props => {
   };
 
   return (
-  
+    <Modal
+      destroyOnClose
+      title={intl.formatMessage({
+        id: `app.user.form.${method === 'create' ? 'new' : 'update'}.title`,
+        defaultMessage: 'New User',
+      })}
+      visible={visible}
+      confirmLoading={confirmLoading}
+      width="50%"
+      onOk={onSubmit}
+      onCancel={() => handleModalVisible()}
+    >
+      <Form
+        form={form}
+        onFinish={onFinish}
+        initialValues={{
+          role: method === 'create' ? 'user' : user.role,
+          email: method === 'create' ? '' : user.email,
+        }}
+      >
+        <FormItem
+          labelCol={{ span: 5 }}
+          wrapperCol={{ span: 15 }}
+          label={intl.formatMessage({
+            id: 'app.user.form.name.label',
+            defaultMessage: 'User Name',
+          })}
+          name="username"
+          rules={[
+            {
+              required: true,
+              message: intl.formatMessage({
+                id: 'app.user.form.name.required',
+                defaultMessage: 'Please input user name',
+              }),
+              min: 1,
+            },
+          ]}
+        >
+          <Input
+            placeholder={intl.formatMessage({
+              id: 'form.input.placeholder',
+              defaultMessage: 'Please input',
+            })}
+          />
+        </FormItem>
+        <FormItem
+          labelCol={{ span: 5 }}
+          wrapperCol={{ span: 15 }}
+          label={intl.formatMessage({
+            id: 'app.user.form.role.label',
+            defaultMessage: 'User Role',
+          })}
+          name="role"
+        >
+          <Select>
+            <Option value="user">
+              {intl.formatMessage({
+                id: 'app.user.role.user',
+                defaultMessage: 'User',
+              })}
+            </Option>
+            <Option value="administrator">
+              {intl.formatMessage({
+                id: 'app.user.role.administrator',
+                defaultMessage: 'Administrator',
+              })}
+            </Option>
+          </Select>
+        </FormItem>
+        <FormItem
+          labelCol={{ span: 5 }}
+          wrapperCol={{ span: 15 }}
+          label={intl.formatMessage({
+            id: 'app.user.form.email.label',
+            defaultMessage: 'Email',
+          })}
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: intl.formatMessage({
+                id: 'app.user.form.email.required',
+                defaultMessage: 'Please input email',
+              }),
+            },
+            {
+              validator: validateEmail,
+            },
+          ]}
+        >
+          <Input
+            placeholder={intl.formatMessage({
+              id: 'form.input.placeholder',
+              defaultMessage: 'Please input',
+            })}
+          />
+        </FormItem>
+        <FormItem
+          labelCol={{ span: 5 }}
+          wrapperCol={{ span: 15 }}
+          label={intl.formatMessage({
+            id: 'app.user.form.password.label',
+            defaultMessage: 'Password',
+          })}
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: intl.formatMessage({
+                id: 'app.user.form.password.required',
+                defaultMessage: 'Please input password',
+              }),
+            },
+          ]}
+        >
+          <Input.Password
+            placeholder={intl.formatMessage({
+              id: 'form.input.placeholder',
+              defaultMessage: 'Please input',
+            })}
+          />
+        </FormItem>
+        <FormItem
+          labelCol={{ span: 5 }}
+          wrapperCol={{ span: 15 }}
+          label={intl.formatMessage({
+            id: 'app.user.form.passwordConfirm.label',
+            defaultMessage: 'Password Confirm',
+          })}
+          name="passwordConfirm"
+          rules={[
+            {
+              required: true,
+              message: intl.formatMessage({
+                id: 'app.user.form.password.required',
+                defaultMessage: 'Please input password',
+              }),
+            },
+            {
+              validator: validatePasswordConfirm,
+            },
+          ]}
+        >
+          <Input.Password
+            placeholder={intl.formatMessage({
+              id: 'form.input.placeholder',
+              defaultMessage: 'Please input',
+            })}
+          />
+        </FormItem>
+        {userRole === 'operator' && (
+          <Form.Item
+            labelCol={{ span: 5 }}
+            wrapperCol={{ span: 15 }}
+            label={intl.formatMessage({
+              id: 'app.user.form.organization.label',
+              defaultMessage: 'Organization',
+            })}
+            name="organization"
+          >
+            <AutoComplete
+              onSearch={onSearchOrganization}
+              onSelect={onSelectOrganization}
+              placeholder={intl.formatMessage({
+                id: 'form.input.placeholder',
+                defaultMessage: 'Please input',
+              })}
+            >
+              {organizationOptions}
+            </AutoComplete>
+          </Form.Item>
+        )}
+      </Form>
+    </Modal>
+  );
+};
 
 @connect(({ user, organization, loading }) => ({
   user,
