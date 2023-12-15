@@ -1,35 +1,14 @@
-import React, { useState } from 'react';
+import React, { PureComponent, Fragment } from 'react';
+import { connect, injectIntl } from 'umi';
 
-function SubscriptionComponent() {
-    const [email, setEmail] = useState('');
-    const [subscriptions, setSubscriptions] = useState(null);
-    const [loading, setLoading] = useState(false);
 
-    const fetchSubscriptions = async () => {
-        setLoading(true);
-        try {
-            const response = await fetch(`http://localhost:5000/get-subscriptions?email=${email}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setSubscriptions(data);
-        } catch (error) {
-            console.error('Failed to fetch subscriptions:', error);
-        } finally {
-            setLoading(false);
-        }
-    };
-
+class MyComponent extends React.Component {
+  render() {
+    const { currentUser } = this.props; // oder this.state, falls es im Zustand gespeichert ist
     return (
-        <div>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-            <button onClick={fetchSubscriptions}>Get Subscriptions</button>
-            {loading && <p>Loading...</p>}
-            {subscriptions && <pre>{JSON.stringify(subscriptions, null, 2)}</pre>}
-        </div>
+      <div>
+        <p>Aktueller Benutzer: {currentUser.username}</p> {/* Beispiel für die Ausgabe des Namens */}
+      </div>
     );
+  }
 }
-
-export default SubscriptionComponent;
-
