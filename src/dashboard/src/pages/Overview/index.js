@@ -2,23 +2,6 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-function CheckoutForm() {
-  const stripe = useStripe();
-  const elements = useElements();
-
-  // Behandlung der Formular\u00fcbermittlung ...
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Jetzt bezahlen
-      </button>
-    </form>
-  );
-}
-
-
 
 
 
