@@ -9,7 +9,7 @@ function HTMLDocumentation() {
 
     
 
-<nav id="navbar"/>
+<nav id="navbar">
 <header>Hyperledger Documentation</header>
 	<ul>
 		<li><a className="nav-link" href="#HTML">HTML</a></li>
