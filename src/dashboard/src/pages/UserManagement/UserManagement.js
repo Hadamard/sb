@@ -584,7 +584,13 @@ class UserManagement extends PureComponent {
         <Card bordered={false}>
           <div className={styles.tableList}>
             <div className={styles.tableListOperator}>
-            
+              <Button type="primary" onClick={() => this.handleModalVisible(true)}>
+                <PlusOutlined />
+                {intl.formatMessage({
+                  id: 'form.button.new',
+                  defaultMessage: 'New',
+                })}
+              </Button>
               {selectedRows.length > 0 && (
                 <span>
                   <Dropdown overlay={menu}>
@@ -599,7 +605,18 @@ class UserManagement extends PureComponent {
                 </span>
               )}
             </div>
-         
+            <StandardTable
+              selectedRows={selectedRows}
+              loading={loadingUsers}
+              rowKey="id"
+              data={{
+                list: data,
+                pagination,
+              }}
+              columns={columns}
+              onSelectRow={this.handleSelectRows}
+              onChange={this.handleTableChange}
+            />
           </div>
         </Card>
         <CreateUpdateForm {...formProps} />
