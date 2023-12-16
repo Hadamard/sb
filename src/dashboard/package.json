@@ -54,9 +54,7 @@
     "@ant-design/icons": "^4.1.0",
     "@ant-design/pro-layout": "^5.0.0",
     "@antv/data-set": "^0.10.1",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.2",
-    "remark-loader": "^1.0.0",
+  
   
     "axios": "^0.21.1",
     "antd": "^4.2.5",
