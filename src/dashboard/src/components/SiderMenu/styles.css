@@ -26,7 +26,7 @@
 
 /* Pricing header */
 .price .header {
-  background-color: #111;
+  background-color: #1E1E1E;
   color: white;
   font-size: 25px;
 }
@@ -40,7 +40,7 @@
 
 /* Grey list item */
 .price .grey {
-  background-color: #eee;
+  background-color: #242424;
   font-size: 20px;
 }
 
