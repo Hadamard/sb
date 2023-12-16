@@ -486,8 +486,9 @@ class UserManagement extends PureComponent {
     } = this.props;
     const data = users.map(user => ({
       ...user,
-      hidden: user.username !== currentUser.username,
+      disabled: user.username !== currentUser.username,
     }));
+    console.log(data);
     const columns = [
       {
         title: intl.formatMessage({
