@@ -18,7 +18,7 @@ function HTMLDocumentation() {
 	
 	</ul>
 </nav>
-<main id="main-doc">
+<div id="main-doc">
 	<section className="main-section" id="HTML" >
 	<header>HTML</header>
 		<p>HTML, a.k.a. Hyper Text Markup Language, defines the construction of webpages using markup. 
@@ -113,7 +113,7 @@ Paragraph with spaces and lines preserved.</pre>
 	</section>
 	<hr>
 	
-</main>
+</div>
 
 
 
