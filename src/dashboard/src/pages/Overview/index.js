@@ -12,15 +12,7 @@ function HTMLDocumentation() {
 <div className="bigwrap">
     
 
-<nav id="navbar">
-<header>Hyperledger Documentation</header>
-	<ul>
-		<li><a className="nav-link" href="#HTML">HTML</a></li>
-		<li><a className="nav-link" href="#Basic_Page_Structure">Basic Page Structure</a></li>
-		<li><a className="nav-link" href="#Headings/Paragraphs">Headings/Paragraphs</a></li>
-	
-	</ul>
-</nav>
+
 <div id="main-doc">
 	<section className="main-section" id="HTML" >
 	<header>HTML</header>
