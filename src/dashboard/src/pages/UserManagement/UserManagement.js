@@ -583,16 +583,7 @@ class UserManagement extends PureComponent {
       >
         <Card bordered={false}>
           <div className={styles.tableList}>
-            <div className={styles.tableListOperator}>
-              <Button type="primary" onClick={() => this.handleModalVisible(true)}>
-                <PlusOutlined />
-                {intl.formatMessage({
-                  id: 'form.button.new',
-                  defaultMessage: 'New',
-                })}
-              </Button>
-             
-            </div>
+            
             <StandardTable
               selectedRows={selectedRows}
               loading={loadingUsers}
