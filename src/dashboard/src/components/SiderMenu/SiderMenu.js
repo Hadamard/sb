@@ -94,6 +94,7 @@ export default class SiderMenu extends PureComponent {
             {...defaultProps}
           />
         </Suspense>
+             return <h3>Mein H3 Text</h3>;
       </Sider>
     );
   }
