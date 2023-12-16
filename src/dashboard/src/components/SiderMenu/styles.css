@@ -12,7 +12,7 @@
 /* Style the list */
 .price {
   list-style-type: none;
-  border: 1px solid #eee;
+  border: none;
   margin: 0;
   padding: 0;
   -webkit-transition: 0.3s;
@@ -33,7 +33,7 @@
 
 /* List items */
 .price li {
-  border-bottom: 1px solid #eee;
+  border-bottom: none;
   padding: 20px;
   text-align: center;
 }
