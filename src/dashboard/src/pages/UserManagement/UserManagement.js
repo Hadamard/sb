@@ -599,18 +599,7 @@ class UserManagement extends PureComponent {
                 </span>
               )}
             </div>
-            <StandardTable
-              selectedRows={selectedRows}
-              loading={loadingUsers}
-              rowKey="id"
-              data={{
-                list: data,
-                pagination,
-              }}
-              columns={columns}
-              onSelectRow={this.handleSelectRows}
-              onChange={this.handleTableChange}
-            />
+         
           </div>
         </Card>
         <CreateUpdateForm {...formProps} />
