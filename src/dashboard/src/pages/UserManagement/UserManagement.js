@@ -488,7 +488,8 @@ class UserManagement extends PureComponent {
       ...user,
       disabled: user.username !== currentUser.username,
     }));
-    console.log(data);
+   const visibleData = data.filter(user => !user.disabled);
+
     const columns = [
       {
         title: intl.formatMessage({
@@ -611,7 +612,7 @@ class UserManagement extends PureComponent {
               loading={loadingUsers}
               rowKey="id"
               data={{
-                list: data,
+                list: visibleData,
                 pagination,
               }}
               columns={columns}
