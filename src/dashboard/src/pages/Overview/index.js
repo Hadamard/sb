@@ -9,7 +9,7 @@ function HTMLDocumentation() {
 
     
 
-<div>
+<div className="bigwrap">
     
 
 <nav id="navbar">
