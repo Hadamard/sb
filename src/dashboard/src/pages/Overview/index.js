@@ -19,7 +19,7 @@ function HTMLDocumentation() {
 	</ul>
 </nav>
 <main id="main-doc">
-	<section className="main-section" id="HTML" />
+	<section className="main-section" id="HTML" >
 	<header>HTML</header>
 		<p>HTML, a.k.a. Hyper Text Markup Language, defines the construction of webpages using markup. 
 		The building blocks of HTML pages are HTML elements represented by tags. 
@@ -31,9 +31,9 @@ function HTMLDocumentation() {
 		<p><code>&lt;tagname attributename=”value”&gt;Content&lt;/tagname&gt;</code></p>
 	</section>
 	<hr>
-	<section className="main-section" id="Basic_Page_Structure"/>
+	<section className="main-section" id="Basic_Page_Structure">
 	<header>Basic Page Structure</header>
-		<ul id="basic-elements"/>
+		<ul id="basic-elements">
 			<li><code>&lt;!DOCTYPE html&gt;</code></li>
 			<p>The first element in HTML document is the &lt;!DOCTYPE&gt;, which is required for browsers to display webpages correctly. 
 			It is an example of an empty element, an element that does not need a closing tag.</p>
@@ -62,14 +62,14 @@ function HTMLDocumentation() {
 		</div>
 	</section>
 	<hr>
-	<section className="main-section" id="Headings/Paragraphs"/>
+	<section className="main-section" id="Headings/Paragraphs">
 	<header id="hp_header">Headings/Paragraphs</header>
 		<h2>Headings</h2>
 		<p>Headings help to define a documents structure and make it easier to read. 
 		They are used by search engines to catalog the structure and content of a web page. 
 		Heading tags run from the most important <code>&lt;h1&gt;</code> to the least <code>&lt;h6&gt;</code> and include a start and end tag.</p>
 		<h3>Heading Examples:</h3>
-		<ul id="headings-list"/>
+		<ul id="headings-list">
 			<li><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></li>
 			<li><code>&lt;h2&gt;Heading 2&lt;/h2&gt;</code></li>
 			<li><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></li>
@@ -84,13 +84,13 @@ function HTMLDocumentation() {
 		<h3>Paragraph Example:</h3>
 		<ul>
 			<li>Code:</li>
-		<div className="para-ex"/>	
+		<div className="para-ex">	
 		<p><code>&lt;p&gt;This is an example paragraph.</code></p>	
 		<p><code>An example paragraph is this.</code></p>
 		<p><code>A paragraph as an example.&lt;/p&gt;</code></p>
 		</div>
 			<li>Display:</li>
-		<div className="para-ex"/>
+		<div className="para-ex">
 		<p>This is an example paragraph. An example paragraph is this.
 			A paragraph as an example.</p>
 		</div>
@@ -98,13 +98,13 @@ function HTMLDocumentation() {
 		<h3>Preserve Paragraph Example:</h3>
 		<ul>
 			<li>Code:</li>
-		<div className="para-ex"/>
+		<div className="para-ex">
 		<p><code>&lt;pre&gt;This is a preserved example paragraph.</code></p>
 		<p><code>A preserved paragraph example.</code></p>
 		<p><code>Paragraph with spaces and lines preserved.&lt;/pre&gt;</code></p>
 		</div>
 			<li>Display:</li>
-		<div className="para-ex"/>
+		<div className="para-ex">
 		<pre>This is a preserved example paragraph.
 A preserved paragraph example.
 Paragraph with spaces and lines preserved.</pre>
