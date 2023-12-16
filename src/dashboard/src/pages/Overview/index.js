@@ -9,6 +9,9 @@ function HTMLDocumentation() {
 
     
 
+<div>
+    
+
 <nav id="navbar">
 <header>Hyperledger Documentation</header>
 	<ul>
@@ -30,7 +33,7 @@ function HTMLDocumentation() {
 		<h3>Element with Attribute:</h3>
 		<p><code>&lt;tagname attributename=”value”&gt;Content&lt;/tagname&gt;</code></p>
 	</section>
-	<hr>
+
 	<section className="main-section" id="Basic_Page_Structure">
 	<header>Basic Page Structure</header>
 		<ul id="basic-elements">
@@ -45,11 +48,11 @@ function HTMLDocumentation() {
 			This element contains meta information about the document, 
 			such as the <code>&lt;title&gt;</code> element that defines the document’s title. </p>
 			<li><code>&lt;body&gt;</code></li>
-			<p>The last basic document structure is the <code>&lt;body></code> element. 
+			<p>The last basic document structure is the <code>&lt;body</code> element. 
 			The visible page content is contained within this element.</p>
 		</ul>
 		<h3>Example:</h3>
-		<div id="basic-ex"/>
+		<div id="basic-ex">
 		<p><code>&lt;!DOCTYPE html&gt;</code></p>
 			<p><code>&lt;html&gt;</code></p>
 			<p><code>&lt;head&gt;</code></p>
@@ -61,7 +64,7 @@ function HTMLDocumentation() {
 			<p ><code>&lt;/html&gt;</code></p>
 		</div>
 	</section>
-	<hr>
+	
 	<section className="main-section" id="Headings/Paragraphs">
 	<header id="hp_header">Headings/Paragraphs</header>
 		<h2>Headings</h2>
@@ -115,6 +118,9 @@ Paragraph with spaces and lines preserved.</pre>
 	
 </div>
 
+</div>
+
+)};
 
 
 export default HTMLDocumentation;
