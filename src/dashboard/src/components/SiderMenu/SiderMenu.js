@@ -95,7 +95,7 @@ export default class SiderMenu extends PureComponent {
             {...defaultProps}
           />
         </Suspense>
-             return (
+
     <div className="columns">
       <ul className="price">
         <li className="header">Free</li>
@@ -109,7 +109,7 @@ export default class SiderMenu extends PureComponent {
         </li>
       </ul>
     </div>
-  );
+ 
       </Sider>
     );
   }
