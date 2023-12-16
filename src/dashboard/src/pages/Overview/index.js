@@ -111,7 +111,7 @@ Paragraph with spaces and lines preserved.</pre>
 		</div>
 		</ul>
 	</section>
-	<hr>
+	
 	
 </div>
 
