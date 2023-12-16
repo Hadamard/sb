@@ -57,6 +57,7 @@
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.1",
     "react-chartjs-2": "^2.9.0", 
+    "axios": "^0.21.1",
     "chart.js": "^2.9.3", 
     "antd": "^4.2.5",
     "bizcharts": "3.5.2-beta.1",
