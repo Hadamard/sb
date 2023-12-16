@@ -1,27 +1,8 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import meineDokumentation from './README.md';
 
-const App = () => {
-  const [number, setNumber] = useState(null);
+const MeineKomponente = () => (
+  <div dangerouslySetInnerHTML={{ __html: meineDokumentation }} />
+);
 
-  const fetchRandomNumber = async () => {
-    try {
-      const response = await axios.get('http://localhost/random_number');
-      setNumber(response.data.number);
-    } catch (error) {
-      console.error('Fehler beim Abrufen der Zahl', error);
-      // Optional: Fehlerbehandlung hinzufügen
-    }
-  };
-
-  return (
-    <div>
-      {number !== null ? <p>Abgerufene Nummer: {number}</p> : <p>Noch keine Zahl abgerufen.</p>}
-      <button onClick={fetchRandomNumber}>Zahl abrufen</button>
-    </div>
-  );
-};
-
-export default App;
-
-
+export default MeineKomponente;
