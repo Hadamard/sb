@@ -6,7 +6,7 @@ const App = () => {
 
   const fetchRandomNumber = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/random_number');
+      const response = await axios.get('http://localhost/random_number');
       setNumber(response.data.number);
     } catch (error) {
       console.error('Fehler beim Abrufen der Zahl', error);
