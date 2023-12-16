@@ -618,6 +618,18 @@ class UserManagement extends PureComponent {
               onChange={this.handleTableChange}
             />
           </div>
+
+         // Extract currentUser from this.props
+        const { currentUser } = this.props.user;
+
+        // Use currentUser.username in your JSX
+        return (
+            <div>
+                <h1>Welcome, {currentUser.username}!</h1>
+                {/* other component code */}
+            </div>
+        );
+
         </Card>
         <CreateUpdateForm {...formProps} />
       </PageHeaderWrapper>
