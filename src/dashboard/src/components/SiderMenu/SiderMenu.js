@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import classNames from 'classnames';
 import { Link } from 'umi';
 import styles from './index.less';
+import './styles.css';
 import PageLoading from '../PageLoading';
 import { getDefaultCollapsedSubMenus } from './SiderMenuUtils';
 import { title } from '../../defaultSettings';
