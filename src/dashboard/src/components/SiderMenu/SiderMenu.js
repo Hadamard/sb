@@ -94,7 +94,21 @@ export default class SiderMenu extends PureComponent {
             {...defaultProps}
           />
         </Suspense>
-             return <h3>Mein H3 Text</h3>;
+             return (
+    <div className="columns">
+      <ul className="price">
+        <li className="header">Free</li>
+        <li className="grey">$ 0.00 / month</li>
+        <li>10GB Storage</li>
+        <li>10 Emails</li>
+        <li>10 Domains</li>
+        <li>1GB Bandwidth</li>
+        <li className="grey">
+          <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM" className="button">Manage plan</a>
+        </li>
+      </ul>
+    </div>
+  );
       </Sider>
     );
   }
