@@ -25,6 +25,47 @@ const ContactForm = () => {
     </div>
   
 
+ <div>
+
+
+    <div className="login-container">
+        <h1>Support Ticket</h1>
+        <div className="form">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required/>
+            
+            <label for="password">E-Mail:</label>
+            <input type="password" id="password" name="password" required/>
+            
+            <label for="subject">Subject:</label>
+            <input type="subject" id="sub" name="sub" required />
+
+            <label for="message">Message:</label>
+            <input type="message" id="message" name="message" required/>
+            
+            <div className="textbox-container">
+              <button type="submit" className="progressbar-container">
+                
+                <div className="progressbar" id="progressbar">Send</div>
+              </button>
+            </div>
+        
+        
+          </div>
+
+   
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+  
  
   );
 };
