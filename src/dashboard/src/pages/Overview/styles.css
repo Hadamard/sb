@@ -56,13 +56,6 @@
   font-size: 18px;
 }
 
-/* Change the width of the three columns to 100%
-(to stack horizontally on small screens) */
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}
 
 
 
@@ -162,6 +155,24 @@ color: white;
 font-size: 30px;
 }
 
+
+
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+
+
+  .login-container {
+  width: 100%;
+    top: 300px;
+    
+  }
+    
+}
 
 
 
