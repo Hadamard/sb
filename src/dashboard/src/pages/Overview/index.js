@@ -22,7 +22,7 @@ const ContactForm = () => {
         </li>
       </ul>
     </div>
-    </div>
+  
   
 
  <div>
@@ -61,6 +61,7 @@ const ContactForm = () => {
 
 
 
+</div>
 
 
 
