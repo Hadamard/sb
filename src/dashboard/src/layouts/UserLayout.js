@@ -23,19 +23,6 @@ class UserLayout extends Component {
   }
 
 
-
-function TextWechsler() {
-    const [text, setText] = useState('Anfangstext');
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setText(prevText => prevText === 'Text 1' ? 'Text 2' : 'Text 1');
-        }, 10000); // 10000 Millisekunden = 10 Sekunden
-
-        return () => clearInterval(interval); // Bereinigen
-    }, []);
-
-
   
   render() {
     const {
@@ -60,7 +47,7 @@ function TextWechsler() {
             </div>
             {children}
           </div>
-            {text}
+            
           <GlobalFooter links={links} copyright={copyright} />
         </div>
       </DocumentTitle>
