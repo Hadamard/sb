@@ -85,24 +85,16 @@ class StandardTable extends PureComponent {
       ...pagination,
     };
 
-    const rowSelection = {
-      selectedRowKeys,
-      onChange: this.handleRowSelectChange,
-      getCheckboxProps: record => ({
-        disabled: record.disabled,
-      }),
-    };
+    
 
     return (
       <div className={styles.standardTable}>
         {!disableSelect && (
-          <div className={styles.tableAlert}>
-            
-          </div>
+       
         )}
         <Table
           rowKey={rowKey || 'key'}
-          rowSelection={!disableSelect && rowSelection}
+         
           dataSource={list}
           pagination={paginationProps}
           onChange={this.handleTableChange}
