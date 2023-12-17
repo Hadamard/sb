@@ -19,7 +19,8 @@ import { DownOutlined, PlusOutlined, UserOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import isEmail from 'validator/lib/isEmail';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-import StandardTable from '@/components/StandardTable';
+import RedTable from '@/components/RedTable';
+
 import { getAuthority } from '@/utils/authority';
 import styles from '../styles.less';
 
@@ -616,7 +617,7 @@ class UserManagement extends PureComponent {
                 </span>
               )}
             </div>
-            <StandardTable
+            <RedTable
               selectedRows={selectedRows}
               loading={loadingUsers}
               rowKey="id"
