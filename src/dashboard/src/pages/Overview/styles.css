@@ -64,3 +64,103 @@
   }
 }
 
+
+
+
+
+* {
+  font-family: "Albert Sans", sans-serif;
+  font-size: inherit;
+}
+
+body {
+  background-color: #1e1e1e;
+  display: grid;
+  place-items: left;
+  position: relative;
+  
+}
+
+
+
+.progressbar {
+
+
+color: white;
+
+}
+
+#message {
+
+
+  height: 150px;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+
+.textbox-container {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 7px;
+
+
+
+}
+
+
+
+.progressbar-container {
+      height: 50px;
+      background-color: #1E1E1E;
+      border-radius: 5px;
+      width:  100%;
+      overflow: hidden;
+      border: none;
+    
+   
+      
+    }
+
+
+
+
+
+
+.back {
+color: white;
+font-size: 30px;
+}
+
+
+
+
