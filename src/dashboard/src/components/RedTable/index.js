@@ -97,43 +97,7 @@ class StandardTable extends PureComponent {
       <div className={styles.standardTable}>
         {!disableSelect && (
           <div className={styles.tableAlert}>
-            <Alert
-              message={
-                <Fragment>
-                  {intl.formatMessage({
-                    id: 'component.standardTable.selected',
-                    defaultMessage: 'Selected',
-                  })}
-                  <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a>{' '}
-                  {intl.formatMessage({
-                    id: 'component.standardTable.item',
-                    defaultMessage: 'Item',
-                  })}
-                  &nbsp;&nbsp;
-                  {needTotalList.map(item => (
-                    <span style={{ marginLeft: 8 }} key={item.dataIndex}>
-                      {item.title}
-                      {intl.formatMessage({
-                        id: 'component.standardTable.total',
-                        defaultMessage: 'Total',
-                      })}{' '}
-                      &nbsp;
-                      <span style={{ fontWeight: 600 }}>
-                        {item.render ? item.render(item.total) : item.total}
-                      </span>
-                    </span>
-                  ))}
-                  <a onClick={this.cleanSelectedKeys} style={{ marginLeft: 24 }}>
-                    {intl.formatMessage({
-                      id: 'component.standardTable.clean',
-                      defaultMessage: 'Clean',
-                    })}
-                  </a>
-                </Fragment>
-              }
-              type="info"
-              showIcon
-            />
+            
           </div>
         )}
         <Table
