@@ -67,7 +67,7 @@ const ContactForm = () => {
   };
 
   return (
-
+<div>
       <div>
      <div className="columns">
       <ul className="price">
@@ -211,6 +211,7 @@ const ContactForm = () => {
           ></button>
         </div>
       )}
+    </div>
     </div>
   );
 };
