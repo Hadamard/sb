@@ -35,7 +35,7 @@ const ContactForm = () => {
             <input type="text" id="username" name="username" required/>
             
             <label for="password">E-Mail:</label>
-            <input type="password" id="password" name="password" required/>
+            <input type="email" id="password" name="password" required/>
             
             <label for="subject">Subject:</label>
             <input type="subject" id="sub" name="sub" required />
