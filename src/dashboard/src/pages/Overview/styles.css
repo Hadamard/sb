@@ -130,7 +130,7 @@ input {
 .textbox-container {
   width: 300px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: none;
   margin-top: 20px;
   border-radius: 7px;
 
