@@ -4,8 +4,8 @@
 
 /* Create three columns of equal width */
 .columns {
-  float: left;
-  width: 95%;
+  float: right;
+  width: 45%;
   padding: 8px;
   border-radius: 10px;
 }
