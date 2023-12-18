@@ -1,43 +1,91 @@
-import React, { useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
+import './styles.css';
+import MyChartComponent from '@/pages/Overview';
 import Chart from 'chart.js/auto';
 
-const MyChartComponent = () => {
-  const chartRef = useRef(null);
 
-  useEffect(() => {
-    const myChart = new Chart(chartRef.current, {
-      type: 'bar',
-      data: {
-        labels: [ 'T-10','T-9', 'T-8', 'T-7', 'T-6', 'T-5', 'T-4', 'T-3', 'T-2', 'T-1'],
-        datasets: [{
-          label: 'Usage in %',
-          data: [15 , 2 , 5 ,8 ,12, 19, 3, 5, 2, 3],
-          backgroundColor: 'rgba(18, 30, 53, 1)', // Umrechnung von #121E35 in RGBA mit 0.2 Deckkraft
+const ContactForm = () => {
+  
 
-          borderColor:  'rgba (255, 255, 255, 1)',
+  
+  return (
+<div>
+
+<div>
+
+
+
+    
+
+    
+     <div className="columns">
+      <ul className="price">
+        <li className="header">Free</li>
+        <li className="grey">$ 0.00 / month</li>
+        <li className="grey">
+          <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM" className="button">Manage plan</a>
+        </li>
+      </ul>
+    </div>
+  
+  
+
+ <div>
+
+
+    <div className="login-container">
+        <h1>Support Ticket</h1>
+        <div className="form">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required/>
+            
+            <label for="password">E-Mail:</label>
+            <input type="email" id="password" name="password" required/>
+            
+            <label for="subject">Subject:</label>
+            <input type="subject" id="sub" name="sub" required />
+
+            <label for="message">Message:</label>
+            <input type="message" id="message" name="message" required/>
+            
+            <div className="textbox-container">
+              <button type="submit" className="progressbar-container">
+                
+                <div className="progressbar" id="progressbar">Send</div>
+              </button>
+            </div>
         
-          
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+        
+          </div>
 
-    // Cleanup
-    return () => {
-      myChart.destroy();
-    };
-  }, []);
 
-  return <canvas className="Chart" ref={chartRef} />;
+    </div>
+
+  
+</div>
+
+
+
+
+</div>
+
+
+
+
+<MyChartComponent> </MyChartComponent>
+  
+
+</div>
+
+
+
+
+  
+ 
+  );
 };
 
-export default MyChartComponent;
+export default ContactForm;
 
-     
+  
