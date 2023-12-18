@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import './styles.css';
-import MyChartComponent from '@/Overview/MyChartComponent';
+import MyChartComponent from '@/pages/Overview';
 
 
 
