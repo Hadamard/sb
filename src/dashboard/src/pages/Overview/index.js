@@ -62,7 +62,7 @@ const ContactForm = () => {
 
     </div>
 
-  
+  <MyChartComponent> </MyChartComponent>
 </div>
 
 
@@ -73,7 +73,7 @@ const ContactForm = () => {
 
 
 
-<MyChartComponent> </MyChartComponent>
+
   
 
 </div>
