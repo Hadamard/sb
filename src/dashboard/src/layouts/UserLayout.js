@@ -22,7 +22,7 @@ class UserLayout extends Component {
       type: 'menu/getMenuData',
       payload: { routes, authority },
     });
-  }
+  };
 
 
 
