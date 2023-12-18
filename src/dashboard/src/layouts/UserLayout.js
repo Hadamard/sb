@@ -22,6 +22,23 @@ const texts = [">> Hadamard Hyperledger leverages Quantum Key Distribution (QKD)
 
 
 
+
+class UserLayout extends Component {
+  componentDidMount() {
+    const {
+      dispatch,
+      route: { routes, authority },
+    } = this.props;
+    dispatch({
+      type: 'menu/getMenuData',
+      payload: { routes, authority },
+    });
+  };
+
+
+
+
+
 const Typewriter = () => {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
@@ -54,17 +71,6 @@ return  <div className='wrap'>{magicName}</div>;
 
 
 
-class UserLayout extends Component {
-  componentDidMount() {
-    const {
-      dispatch,
-      route: { routes, authority },
-    } = this.props;
-    dispatch({
-      type: 'menu/getMenuData',
-      payload: { routes, authority },
-    });
-  };
 
 
 
