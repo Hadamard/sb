@@ -6,8 +6,8 @@ margin-left: calc(50% - 140px);
 background-color: #2E2E2E;
 padding: 20px;
 border-radius: 8px;
-min-width: 200px;
-max-width: 300px;
+
+width: 380px;
 min-height: 50px;
 font-family: "Albert Sans", sans-serif;
 font-size: inherit;
