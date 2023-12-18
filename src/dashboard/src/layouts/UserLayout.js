@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState, useEffect } from 'react';
 import { Link, connect } from 'umi';
 import GlobalFooter from '@/components/GlobalFooter';
 import DocumentTitle from 'react-document-title';
 import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
-
+import useTypewriter from 'react-typewriter-hook';
 const links = [];
 
 const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
