@@ -61,7 +61,34 @@ const texts = [">> Hadamard Hyperledger leverages Quantum Key Distribution (QKD)
     
     
     class UserLayout extends Component {
-      componentDidMount() {
+      
+     
+      const [index, setIndex] = useState(0);
+      const [text, setText] = useState("");
+      const intervalRef = React.useRef(null);
+    
+      const magicName = useTypewriter(text);
+     
+     useEffect(() => {
+        if (text === texts[index]) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = setTimeout(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          }, 30000); // Ändert den Text nach 5 Sekunden
+        } else {
+          setText(texts[index]);
+        }
+      }, [text, index]);
+    
+      useEffect(() => {
+        return () => {
+          clearInterval(intervalRef.current);
+        };
+      }, []);
+     
+     
+     
+     componentDidMount() {
         const {
           dispatch,
           route: { routes, authority },
@@ -95,7 +122,7 @@ const texts = [">> Hadamard Hyperledger leverages Quantum Key Distribution (QKD)
                 </div>
                 {children}
               </div>
-             
+               <div className='wrap'>{magicName}</div>
                <GlobalFooter links={links} copyright={copyright} />
             </div>
           </DocumentTitle>
