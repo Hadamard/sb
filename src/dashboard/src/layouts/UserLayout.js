@@ -92,7 +92,8 @@ const texts = [">> Hadamard Hyperledger leverages Quantum Key Distribution (QKD)
                 </div>
                 {children}
               </div>
-              <GlobalFooter links={links} copyright={copyright} />
+              <div className='wrap'>{magicName}</div>
+               <GlobalFooter links={links} copyright={copyright} />
             </div>
           </DocumentTitle>
         );
