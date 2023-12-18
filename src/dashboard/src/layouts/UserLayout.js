@@ -49,7 +49,7 @@ const Typewriter = () => {
       clearInterval(intervalRef.current);
     };
   }, []);
-
+return  <div className='wrap'>{magicName}</div>;
 };
 
 
