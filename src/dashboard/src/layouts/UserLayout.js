@@ -47,7 +47,7 @@ class UserLayout extends Component {
             </div>
             {children}
           </div>
-            <Typer style={{ display: flex, alignitems: center, justifycontent: center }} />
+            <Typer></Typer>
           <GlobalFooter links={links} copyright={copyright} />
         </div>
       </DocumentTitle>
