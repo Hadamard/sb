@@ -6,6 +6,9 @@ import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
 import useTypewriter from 'react-typewriter-hook';
+import styles from './lays.css';
+
+
 const links = [];
 
 const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
