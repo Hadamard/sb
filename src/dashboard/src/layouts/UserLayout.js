@@ -5,6 +5,8 @@ import DocumentTitle from 'react-document-title';
 import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
+import Typer from '@/layouts/Typer';
+
 
 const links = [];
 
