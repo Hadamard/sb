@@ -59,7 +59,7 @@ const ContactForm = () => {
         
           </div>
 
-
+  <MyChartComponent> </MyChartComponent>
     </div>
 
 
