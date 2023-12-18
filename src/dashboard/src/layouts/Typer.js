@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import useTypewriter from 'react-typewriter-hook';
-import styles from './lays.css';
 
 
 
