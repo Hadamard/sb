@@ -66,7 +66,7 @@ const ContactForm = () => {
 
 
 
-<MyChartComponent> </MyChartComponent>
+
 
 
 
