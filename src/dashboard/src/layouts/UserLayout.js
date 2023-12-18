@@ -12,27 +12,15 @@ const links = [];
 
 const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
 
-class UserLayout extends Component {
-  componentDidMount() {
-    const {
-      dispatch,
-      route: { routes, authority },
-    } = this.props;
-    dispatch({
-      type: 'menu/getMenuData',
-      payload: { routes, authority },
-    });
-  };
-
-
-
-
 
 const texts = [">> Hadamard Hyperledger leverages Quantum Key Distribution (QKD) technology to enhance the security of blockchain transactions.",
- ">> By incorporating the Hyperledger project, Hadamard Hyperledger provides a robust and scalable blockchain framework.",
-  ">>  The combination of QKD and blockchain in Hadamard Hyperledger ensures superior data privacy and integrity.",
-   ">>  With its quantum-resistant cryptographic methods, Hadamard Hyperledger positions itself as a future-proof solution.",
-    ">>  The framework can be utilized for various applications."];
+">> By incorporating the Hyperledger project, Hadamard Hyperledger provides a robust and scalable blockchain framework.",
+">>  The combination of QKD and blockchain in Hadamard Hyperledger ensures superior data privacy and integrity.",
+">>  With its quantum-resistant cryptographic methods, Hadamard Hyperledger positions itself as a future-proof solution.",
+">>  The framework can be utilized for various applications."];
+
+
+
 
 const Typewriter = () => {
   const [index, setIndex] = useState(0);
@@ -66,7 +54,17 @@ const Typewriter = () => {
 
 
 
-
+class UserLayout extends Component {
+  componentDidMount() {
+    const {
+      dispatch,
+      route: { routes, authority },
+    } = this.props;
+    dispatch({
+      type: 'menu/getMenuData',
+      payload: { routes, authority },
+    });
+  };
 
 
 
