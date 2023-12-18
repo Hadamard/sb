@@ -180,8 +180,8 @@ font-size: 30px;
 
   background-color: #2E2E2E;
  padding: 30px;
-border-radius: 8px;
-width: 40%;
+border-radius: 0px 0px 8px 8px;
+width: 50%;
 float: right;
 }
 
