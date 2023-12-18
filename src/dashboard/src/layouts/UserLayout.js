@@ -6,7 +6,7 @@ import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
 import Typer from '@/layouts/Typer';
-import styles from './lays.css';
+import lays from './lays.css';
 
 const links = [];
 
