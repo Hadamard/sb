@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import './styles.css';
 import MyChartComponent from '@/pages/Overview';
-
+import Chart from 'chart.js/auto';
 
 
 const ContactForm = () => {
