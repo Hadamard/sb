@@ -54,7 +54,7 @@
     "@ant-design/icons": "^4.1.0",
     "@ant-design/pro-layout": "^5.0.0",
     "@antv/data-set": "^0.10.1",
-    
+    "react-typewriter-hook": "^1.0.2",
     "axios": "^0.21.1",
     "antd": "^4.2.5",
     "bizcharts": "3.5.2-beta.1",
