@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import './styles.css';
-
+import MyChartComponent from '@/Overview/MyChartComponent';
 
 
 
@@ -62,6 +62,19 @@ const ContactForm = () => {
 </div>
 
 
+
+
+
+
+<MyChartComponent> </MyChartComponent>
+
+
+
+
+
+
+
+  
 
 </div>
 
