@@ -13,6 +13,11 @@ const links = [];
 
 const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
 
+
+const clientId = "553897053296-fu5one4f5jfjj99hfc8ak35c8i4d3fsg.apps.googleusercontent.com";
+
+
+
 class UserLayout extends Component {
   componentDidMount() {
     const {
@@ -47,7 +52,18 @@ class UserLayout extends Component {
               <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
             </div>
             {children}
-      
+          <div>
+      <GoogleLogin
+        clientId={clientId}
+        buttonText="Login with Google"
+        onSuccess={onSuccess}
+        onFailure={onFailure}
+        cookiePolicy={'single_host_origin'}
+      />
+    </div>
+
+
+    
           <Typer></Typer>
           </div>
            
