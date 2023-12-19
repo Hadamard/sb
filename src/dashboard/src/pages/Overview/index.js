@@ -87,11 +87,15 @@ function SupportTicketForm() {
          
                 <button className="progressbar-container" type="submit">Send</button>
                 <div className="progressbar" id="progressbar">Send</div>
-             
+
+
+                 </div>
+
+    
             </form>
         
         
-          </div>
+     
 
 
     </div>
