@@ -57,15 +57,7 @@ class UserLayout extends Component {
           </div>
 
 
-              <div>
-      <GoogleLogin
-        clientId={clientId}
-        buttonText="Login with Google"
-        onSuccess={onSuccess}
-        onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-      />
-    </div>
+       
 
             
           <GlobalFooter links={links} copyright={copyright} />
