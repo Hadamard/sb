@@ -5,6 +5,7 @@ import DocumentTitle from 'react-document-title';
 import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
+import { GoogleLogin } from 'react-google-login';
 import Typer from '@/layouts/Typer';
 import './lays.css';
 
