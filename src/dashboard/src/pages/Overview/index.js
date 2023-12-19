@@ -5,8 +5,6 @@ import MyChartComponent from '@/pages/Overview/MyChartComponent';
 
 
 
-const ContactForm = () => {
-  
 
 
 function SupportTicketForm() {
@@ -30,8 +28,7 @@ function SupportTicketForm() {
         } catch (error) {
             console.error(error);
             // handle error (z.B. Fehlermeldung anzeigen)
-        }
-    };
+
 
 
 
@@ -124,6 +121,6 @@ function SupportTicketForm() {
   );
 };
 
-export default ContactForm;
+export default handleSubmit;
 
   
