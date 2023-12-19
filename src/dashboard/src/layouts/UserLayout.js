@@ -30,6 +30,20 @@ class UserLayout extends Component {
     });
   }
 
+
+  const onSuccess = (res) => {
+    console.log('Login Success: currentUser:', res.profileObj);
+  };
+
+  const onFailure = (res) => {
+    console.log('Login Failed:', res);
+  };
+
+
+
+
+
+  
   render() {
     const {
       children,
@@ -52,7 +66,23 @@ class UserLayout extends Component {
               <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
             </div>
             {children}
-      
+
+
+          <div>
+      <GoogleLogin
+        clientId={clientId}
+        buttonText="Login with Google"
+        onSuccess={onSuccess}
+        onFailure={onFailure}
+        cookiePolicy={'single_host_origin'}
+      />
+          </div>
+
+
+
+
+
+    
           <Typer></Typer>
           </div>
 
