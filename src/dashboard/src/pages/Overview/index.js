@@ -77,7 +77,7 @@ function SupportTicketForm() {
 
 
     </div>
-<MyChartComponent> </MyChartComponent>
+<MyChartComponent className="Chart"> </MyChartComponent>
 
 </div>
 
