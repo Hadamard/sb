@@ -65,7 +65,7 @@ class UserLayout extends Component {
 
 
           <div>
-      <GoogleLogin
+      <GoogleLogin className='Login'
         clientId={clientId}
         buttonText="Login with Google"
         onSuccess={onSuccess}
