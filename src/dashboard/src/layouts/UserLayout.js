@@ -47,13 +47,7 @@ class UserLayout extends Component {
               <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
             </div>
             {children}
-      <GoogleLogin
-      clientId="553897053296-fu5one4f5jfjj99hfc8ak35c8i4d3fsg.apps.googleusercontent.com" // Ersetzen Sie dies mit Ihrer Client-ID
-      buttonText="Login with Google"
-      onSuccess={responseGoogle}
-      onFailure={responseGoogle}
-      cookiePolicy={'single_host_origin'}
-    />
+      
           <Typer></Typer>
           </div>
            
