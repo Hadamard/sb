@@ -1,12 +1,33 @@
 import { useState, useEffect } from 'react';
-
+import axios from 'axios';
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
 
 
+function SupportTicketForm() {
+  const [formData, setFormData] = useState({
+      username: '',
+      email: '',
+      subject: '',
+      message: ''
+  });
 
-const ContactForm = () => {
-  
+  const handleChange = (e) => {
+      setFormData({...formData, [e.target.name]: e.target.value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await axios.post('https://gpiznri557.execute-api.eu-central-1.amazonaws.com', formData);
+        console.log(response.data);
+        // handle success (z.B. Benachrichtigung anzeigen)
+    } catch (error) {
+        console.error(error);
+        // handle error (z.B. Fehlermeldung anzeigen)
+    }
+};
+
 
   
   return (
@@ -16,7 +37,7 @@ const ContactForm = () => {
 
 
 
-    
+
 
     
      <div className="columns">
@@ -36,33 +57,28 @@ const ContactForm = () => {
 
     <div className="login-container">
         <h1>Support Ticket</h1>
-        <div className="form">
+        <form className="form" onSubmit={handleSubmit}>
             <label for="username">Name:</label>
             <input type="text" id="username" name="username" required/>
             
-            <label for="password">E-Mail:</label>
-            <input type="email" id="password" name="password" required/>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required/>
             
             <label for="subject">Subject:</label>
-            <input type="subject" id="sub" name="sub" required />
+            <input type="subject" id="subject" name="subject" required />
 
             <label for="message">Message:</label>
             <input type="message" id="message" name="message" required/>
             
-            <div className="textbox-container">
-              <button type="submit" className="progressbar-container">
-                
-                <div className="progressbar" id="progressbar">Send</div>
-              </button>
-            </div>
+            <button type="submit">Send</button>
         
         
-          </div>
+          </form>
 
 
     </div>
+<MyChartComponent> </MyChartComponent>
 
-  <MyChartComponent> </MyChartComponent>
 </div>
 
 
@@ -86,6 +102,7 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default SupportTicketForm;
 
+  
   
