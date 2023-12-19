@@ -16,6 +16,13 @@ const copyright = <Fragment>Hadamard Corporation © 2024</Fragment>;
 
 const clientId = "553897053296-fu5one4f5jfjj99hfc8ak35c8i4d3fsg.apps.googleusercontent.com";
 
+const onSuccess = (res) => {
+    console.log('Login Success: currentUser:', res.profileObj);
+  };
+
+  const onFailure = (res) => {
+    console.log('Login Failed:', res);
+  };
 
 
 class UserLayout extends Component {
@@ -29,17 +36,6 @@ class UserLayout extends Component {
       payload: { routes, authority },
     });
   }
-
-
-  const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
-  };
-
-  const onFailure = (res) => {
-    console.log('Login Failed:', res);
-  };
-
-
 
 
 
