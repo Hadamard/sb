@@ -1,44 +1,13 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
 
 
 
-
-
-function SupportTicketForm() {
-    const [formData, setFormData] = useState({
-        username: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('https://gpiznri557.execute-api.eu-central-1.amazonaws.com/', formData);
-            console.log(response.data);
-            // handle success (z.B. Benachrichtigung anzeigen)
-        } catch (error) {
-            console.error(error);
-            // handle error (z.B. Fehlermeldung anzeigen)
-
-
-
-
-
-
-
-
-
-
+const ContactForm = () => {
   
+
   
   return (
 <div>
@@ -67,7 +36,7 @@ function SupportTicketForm() {
 
     <div className="login-container">
         <h1>Support Ticket</h1>
-         <form className="form" onSubmit={handleSubmit}>
+        <div className="form">
             <label for="username">Name:</label>
             <input type="text" id="username" name="username" required/>
             
@@ -81,18 +50,14 @@ function SupportTicketForm() {
             <input type="message" id="message" name="message" required/>
             
             <div className="textbox-container">
-         
-                <button className="progressbar-container" type="submit">Send</button>
+              <button type="submit" className="progressbar-container">
+                
                 <div className="progressbar" id="progressbar">Send</div>
-
-
-                 </div>
-
-    
-            </form>
+              </button>
+            </div>
         
         
-     
+          </div>
 
 
     </div>
@@ -121,6 +86,6 @@ function SupportTicketForm() {
   );
 };
 
-export default handleSubmit;
+export default ContactForm;
 
   
