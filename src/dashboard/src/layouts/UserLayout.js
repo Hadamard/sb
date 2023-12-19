@@ -52,7 +52,12 @@ class UserLayout extends Component {
               <div className={styles.desc}>Dashboard for Managing Hadamard Hyperledger</div>
             </div>
             {children}
-          <div>
+      
+          <Typer></Typer>
+          </div>
+
+
+              <div>
       <GoogleLogin
         clientId={clientId}
         buttonText="Login with Google"
@@ -62,11 +67,7 @@ class UserLayout extends Component {
       />
     </div>
 
-
-    
-          <Typer></Typer>
-          </div>
-           
+            
           <GlobalFooter links={links} copyright={copyright} />
         </div>
       </DocumentTitle>
