@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
-
+import Hubspot from '@/components/Hubspot';
 
 function SupportTicketForm() {
   const [formData, setFormData] = useState({
@@ -55,28 +55,9 @@ function SupportTicketForm() {
  <div>
 
 
-    <div className="login-container">
-        <h1>Support Ticket</h1>
-        <form className="form" onSubmit={handleSubmit}>
-            <label for="username">Name:</label>
-            <input type="text" id="username" name="username" required/>
-            
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required/>
-            
-            <label for="subject">Subject:</label>
-            <input type="subject" id="subject" name="subject" required />
+<Hubspot> </Hubspot>
 
-            <label for="message">Message:</label>
-            <input type="message" id="message" name="message" required/>
-            
-            <button type="submit">Send</button>
-        
-        
-          </form>
-
-
-    </div>
+    
 <MyChartComponent className="Chart"> </MyChartComponent>
 
 </div>
