@@ -18,7 +18,11 @@ const Hubspot = () => {
     };
   }, []); // Das leere Array stellt sicher, dass der Effekt nur einmalig beim Montieren der Komponente ausgeführt wird
 
+  return (
+    <div>
 
+    </div>
+  );
 };
 
 export default Hubspot;
