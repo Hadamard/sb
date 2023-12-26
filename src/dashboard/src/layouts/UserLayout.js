@@ -64,8 +64,8 @@ class UserLayout extends Component {
             </div>
             {children}
 
+<div style={{ width: '330px', marginLeft: 'auto', marginRight: 'auto' }}>
 
-         <div style={{ width: '330px', margin-left: 'auto', margin-right: 'auto' }}>
       <GoogleLogin className='googlelogin'
         clientId={clientId}
         buttonText="Login with Google"
