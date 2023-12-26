@@ -65,7 +65,7 @@ class UserLayout extends Component {
             {children}
 
 
-         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '330px' }}>
+         <div style={{ width: '330px', margin-left: 'auto', margin-right: 'auto' }}>
       <GoogleLogin className='googlelogin'
         clientId={clientId}
         buttonText="Login with Google"
