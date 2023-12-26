@@ -489,7 +489,15 @@ class UserManagement extends PureComponent {
       ...user,
       disabled: user.username !== currentUser.username,
     }));
-   const visibleData = data.filter(user => !user.disabled);
+   let visibleData;
+
+if (currentUser.username === 'info@hadamard.com') {
+  // Wenn currentUser.username gleich 'info@hadamard.com' ist
+  visibleData = data;
+} else {
+  // Wenn currentUser.username nicht gleich 'info@hadamard.com' ist
+  visibleData = data.filter(user => !user.disabled);
+}
 
 
    
