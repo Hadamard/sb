@@ -65,7 +65,7 @@ class UserLayout extends Component {
             {children}
 
 
-          <div>
+         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <GoogleLogin className='googlelogin'
         clientId={clientId}
         buttonText="Login with Google"
@@ -73,8 +73,7 @@ class UserLayout extends Component {
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
       />
-          </div>
-
+        </div>
 
 
 
