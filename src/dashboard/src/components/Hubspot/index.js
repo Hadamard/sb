@@ -19,10 +19,7 @@ const Hubspot = () => {
   }, []); // Das leere Array stellt sicher, dass der Effekt nur einmalig beim Montieren der Komponente ausgeführt wird
 
   return (
-    <div>
-      {/* Hier kannst du den restlichen React-Code für deine Komponente hinzufügen */}
-      <p>Deine React-Komponente mit HubSpot-Integration</p>
-    </div>
+   
   );
 };
 
