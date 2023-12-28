@@ -10,7 +10,7 @@ const texts = [">> It may take up to 24 hours after creating your user account b
 
 
 
-    const support = () => {
+    const Support = () => {
       const [index, setIndex] = useState(0);
       const [text, setText] = useState("");
       const intervalRef = React.useRef(null);
@@ -39,4 +39,4 @@ const texts = [">> It may take up to 24 hours after creating your user account b
     
 
 
-  export default support;
+  export default Support;
