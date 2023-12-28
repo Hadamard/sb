@@ -7,7 +7,7 @@ import { Card, Button, Form, Modal, Input, message, Divider } from 'antd';
 import { PlusOutlined, TeamOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-import StandardTable from '@/components/StandardTable';
+import RedTable from '@/components/RedTable';
 import styles from '../styles.less';
 
 const FormItem = Form.Item;
@@ -395,7 +395,7 @@ class Organization extends PureComponent {
                 {intl.formatMessage({ id: 'form.button.new', defaultMessage: 'New' })}
               </Button>
             </div>
-            <StandardTable
+            <RedTable
               selectedRows={selectedRows}
               loading={loadingOrganizations}
               rowKey="id"
