@@ -54,6 +54,8 @@
     "@ant-design/icons": "^4.1.0",
     "@ant-design/pro-layout": "^5.0.0",
     "@antv/data-set": "^0.10.1",
+    "@stripe/react-stripe-js": "^1.6.1",
+    "@stripe/stripe-js": "^1.26.0"
     "react-typewriter-hook": "^1.0.2",
     "axios": "^0.21.1",
     "chart.js": "^4.4.1",
