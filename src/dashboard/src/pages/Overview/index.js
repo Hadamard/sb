@@ -5,7 +5,7 @@ import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import stripe from '@/components/stripe';
+import qwer from '@/components/qwer';
 
 
 
