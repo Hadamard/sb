@@ -3,7 +3,7 @@ import axios from 'axios';
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
-import support from '@/components/support';
+import Support from '@/components/Support';
 
 
 
@@ -44,7 +44,7 @@ function SupportTicketForm() {
 
 
 
-          <support></support>
+          <Support></Support>
    
   
   
