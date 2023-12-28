@@ -332,6 +332,9 @@ class Organization extends PureComponent {
       creatingOrganization,
       intl,
     } = this.props;
+
+
+   
     const columns = [
       {
         title: intl.formatMessage({
