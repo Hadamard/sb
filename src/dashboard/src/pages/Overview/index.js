@@ -3,6 +3,11 @@ import axios from 'axios';
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import stripe from '@/components/stripe';
+
+
 
 function SupportTicketForm() {
   const [formData, setFormData] = useState({
