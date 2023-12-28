@@ -5,7 +5,7 @@ import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import Typer from '@/components/support';
+import support from '@/components/support';
 
 
 
