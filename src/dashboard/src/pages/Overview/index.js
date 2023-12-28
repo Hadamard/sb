@@ -24,7 +24,6 @@ function SupportTicketForm() {
 
 
 
-  const stripePromise = loadStripe('pk_live_51NxABWG9TKiSYMBESorYPcskqUxHGyR4ER8cOgPflN3wu2wVndJnB9ctuEV4NbZU2TVcDKcJ9JgswPWpM1W1wqYG00xYpVZ12l');
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,9 +49,10 @@ function SupportTicketForm() {
 
 
     
-    <Elements stripe={stripePromise}>
-      <stripe />
-    </Elements>
+  <stripe-pricing-table
+      pricing-table-id="'{{prctbl_1OSAczG9TKiSYMBEhlqeuBim}}'"
+      publishable-key="pk_test_51NxABWG9TKiSYMBE6R9ITIi99Jn9e6e18LLmPnLMYfCzMCeKdPGqDtPkgTgTlPjlUWyCjAxdDC6k7GcwpcgUeqWD00RBpStmwn">
+    </stripe-pricing-table>
   
   
 
