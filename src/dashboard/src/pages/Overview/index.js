@@ -5,7 +5,7 @@ import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-
+import Typer from '@/layouts/Typer';
 
 
 
@@ -46,7 +46,7 @@ function SupportTicketForm() {
 
 
 
-
+          <Typer></Typer>
     
   <stripe-pricing-table
       pricing-table-id="'{{prctbl_1OSAczG9TKiSYMBEhlqeuBim}}'"
