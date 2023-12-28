@@ -3,8 +3,6 @@ import axios from 'axios';
 import './styles.css';
 import MyChartComponent from '@/pages/Overview/MyChartComponent';
 import Hubspot from '@/components/Hubspot';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
 import support from '@/components/support';
 
 
@@ -47,11 +45,7 @@ function SupportTicketForm() {
 
 
           <support></support>
-    
-  <stripe-pricing-table
-      pricing-table-id="'{{prctbl_1OSAczG9TKiSYMBEhlqeuBim}}'"
-      publishable-key="pk_test_51NxABWG9TKiSYMBE6R9ITIi99Jn9e6e18LLmPnLMYfCzMCeKdPGqDtPkgTgTlPjlUWyCjAxdDC6k7GcwpcgUeqWD00RBpStmwn">
-    </stripe-pricing-table>
+   
   
   
 
