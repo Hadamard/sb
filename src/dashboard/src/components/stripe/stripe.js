@@ -1,7 +1,7 @@
 // YourPricingTableComponent.js
 import React from 'react';
 
-const YourPricingTableComponent = () => {
+const stripe = () => {
   return (
     <div>
       {/* Hier können Sie Ihre Pricing-Tabelle und andere React-Elemente hinzufügen */}
@@ -14,5 +14,5 @@ const YourPricingTableComponent = () => {
   );
 };
 
-export default YourPricingTableComponent;
+export default stripe;
 
