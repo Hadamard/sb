@@ -21,6 +21,10 @@ function SupportTicketForm() {
       setFormData({...formData, [e.target.name]: e.target.value});
   };
 
+
+
+  const stripePromise = loadStripe('pk_live_51NxABWG9TKiSYMBESorYPcskqUxHGyR4ER8cOgPflN3wu2wVndJnB9ctuEV4NbZU2TVcDKcJ9JgswPWpM1W1wqYG00xYpVZ12l');
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
