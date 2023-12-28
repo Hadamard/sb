@@ -61,7 +61,7 @@ function SupportTicketForm() {
 <Hubspot> </Hubspot>
 
     
-<MyChartComponent className="Chart"> </MyChartComponent>
+
 
 </div>
 
