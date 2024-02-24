@@ -108,6 +108,13 @@ export default [
             icon: 'chaincode',
             component: './ChainCode/ChainCode',
           },
+             {
+            path: '/documentation',
+            name: 'documentation',
+            icon: 'chaincode',
+            component: './Documentation/Documentation',
+          },
+         
           {
             path: '/userManagement',
             name: 'userManagement',
