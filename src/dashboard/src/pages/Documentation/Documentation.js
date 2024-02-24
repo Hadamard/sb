@@ -10,7 +10,7 @@ class IframeComponent extends React.Component {
 
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        <h1>Meine React-Anwendung mit einem iframe</h1>
+    
         <iframe
           title="Documentation"
           src="https://hadamard.com/c/documentation/"
