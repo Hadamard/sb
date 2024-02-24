@@ -12,7 +12,7 @@ class cost extends React.Component {
       <div style={{ width: '100%', height: '100%' }}>
     
         <iframe
-          title="Documentation"
+          title="Dashboard"
           src="http://bb84.com/dash"
           style={iframeStyle}
         />
