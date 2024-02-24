@@ -30,6 +30,8 @@ const menus = {
   chaincode: <FunctionOutlined />,
   user: <UserOutlined />,
   agent: <DesktopOutlined />,
+  book: <BookOutlined />,
+  pay: <CreditCardOutlined />,
 };
 
 // Allow menu.js config icon as string or ReactNode
