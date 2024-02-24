@@ -1,9 +1,11 @@
 import React from 'react';
 
-class cost extends React.Component {
-  render() {
-   
-  }
+function EmptyComponent() {
+  return (
+    <div>
+      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
+    </div>
+  );
 }
 
-export default cost;
+export default EmptyComponent;
