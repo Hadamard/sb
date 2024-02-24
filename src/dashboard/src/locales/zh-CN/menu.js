@@ -15,6 +15,8 @@ export default {
   'menu.newNode.nodeInfo': '输入节点的特殊信息',
   'menu.network': '网络管理',
   'menu.newNetwork': '新建网络',
+  'menu.documentation': '文档',
+  'menu.costmanagement': '成本管理',
   'menu.channel': '通道管理',
   'menu.chaincode': '链码管理',
   'menu.exception': '异常页',
