@@ -17,6 +17,7 @@ export default {
   'menu.newNetwork': 'New Network',
   'menu.channel': 'Channel',
   'menu.documentation': 'Documentation',
+  'menu.costmanagement': 'Cost Management',
   'menu.chaincode': 'Chaincode',
   'menu.exception': 'Exception',
   'menu.exception.not-permission': '403',
