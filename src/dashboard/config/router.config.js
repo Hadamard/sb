@@ -34,7 +34,7 @@ export default [
             {
             path: '/costmanagement',
             name: 'costmanagement',
-            icon: 'channel',
+            icon: 'pay',
             component: './CostManagement/CostManagement',
           },
           
@@ -118,7 +118,7 @@ export default [
              {
             path: '/documentation',
             name: 'documentation',
-            icon: 'chaincode',
+            icon: 'book',
             component: './Documentation/Documentation',
           },
          
