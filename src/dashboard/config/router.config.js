@@ -31,7 +31,14 @@ export default [
             icon: 'dashboard',
             component: './Overview/index',
           },
-          {
+            {
+            path: '/costmanagement',
+            name: 'costmanagement',
+            icon: 'channel',
+            component: './CostManagement/CostManagement',
+          },
+          
+         {
             path: '/organization',
             authority: ['admin'],
             name: 'organization',
