@@ -1,86 +1,24 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import './styles.css';
-import MyChartComponent from '@/pages/Overview/MyChartComponent';
-import Hubspot from '@/components/Hubspot';
-import Support from '@/components/Support';
+import React from 'react';
 
+class IframeComponent extends React.Component {
+  render() {
+    const iframeStyle = {
+      width: '100%',
+      height: '100%',
+      border: 'none' // optional: removes iframe border
+    };
 
-
-function SupportTicketForm() {
-  const [formData, setFormData] = useState({
-      username: '',
-      email: '',
-      subject: '',
-      message: ''
-  });
-
-  const handleChange = (e) => {
-      setFormData({...formData, [e.target.name]: e.target.value});
-  };
-
-
-
-  
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-        const response = await axios.post('https://gpiznri557.execute-api.eu-central-1.amazonaws.com', formData);
-        console.log(response.data);
-        // handle success (z.B. Benachrichtigung anzeigen)
-    } catch (error) {
-        console.error(error);
-        // handle error (z.B. Fehlermeldung anzeigen)
-    }
-};
-
-
-  
-  return (
-<div>
-
-<div>
-
-
-
-
-          <Support></Support>
-   
-  
-  
-
- <div>
-
-
-<Hubspot> </Hubspot>
-
+    return (
+      <div style={{ width: '100%', height: '100%' }}>
     
+        <iframe
+          title="Documentation"
+          src="http://bb84.com/dash"
+          style={iframeStyle}
+        />
+      </div>
+    );
+  }
+}
 
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-
-  
-
-</div>
-
-
-
-
-  
- 
-  );
-};
-
-export default SupportTicketForm;
-
-  
-  
+export default IframeComponent;
