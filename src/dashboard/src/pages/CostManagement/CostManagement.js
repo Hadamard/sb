@@ -15,6 +15,7 @@ class cost extends React.Component {
           title="Dashboard"
           src="https://hadamard.com/dash"
           style={iframeStyle}
+          scrolling="no"
         />
       </div>
     );
