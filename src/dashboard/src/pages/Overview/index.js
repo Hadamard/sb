@@ -47,7 +47,7 @@ const LineChart = () => {
       data: {
         labels: ["January", "February", "March", "April", "May", "June", "August", "September"],
         datasets: [{
-          label: "My First dataset",
+          label: "Transactions / Month",
           data: [4, 20, 5, 20, 5, 25, 9, 18],
           backgroundColor: 'transparent',
           borderColor: '#0d6efd',
@@ -151,7 +151,7 @@ function App(props) {
         <div className="row">
           <div className="col-lg-6">
             <div className="chart-container rounded-2 p-3">
-              <h3 className="fs-6 mb-3">Operations</h3>
+              <h3 className="fs-6 mb-3">Network requests</h3>
            <BarChart />
             </div>
           </div>
