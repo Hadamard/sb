@@ -100,7 +100,7 @@ const LineChart = () => {
 
 
 
-export function App(props) {
+function App(props) {
   return (
     <div className='App'>
      <head>
