@@ -130,7 +130,7 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Emails</span>
+                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Nodes</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
@@ -141,7 +141,7 @@ function App(props) {
             
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Projects</span>
+                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Networks</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
@@ -152,7 +152,7 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Users</span>
+                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Channels</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
