@@ -53,20 +53,6 @@ const LineChart = () => {
           borderColor: '#0d6efd',
           lineTension: 0.4,
           borderWidth: 1.5,
-        }, {
-          label: "Month",
-          data: [11, 25, 10, 25, 10, 30, 14, 23],
-          backgroundColor: 'transparent',
-          borderColor: '#dc3545',
-          lineTension: 0.4,
-          borderWidth: 1.5,
-        }, {
-          label: "Month",
-          data: [16, 30, 16, 30, 16, 36, 21, 35],
-          backgroundColor: 'transparent',
-          borderColor: '#f0ad4e',
-          lineTension: 0.4,
-          borderWidth: 1.5,
         }]
       },
       options: {
