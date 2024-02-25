@@ -53,20 +53,6 @@ const LineChart = () => {
           borderColor: '#0d6efd',
           lineTension: 0.4,
           borderWidth: 1.5,
-        }, {
-          label: "Month",
-          data: [11, 25, 10, 25, 10, 30, 14, 23],
-          backgroundColor: 'transparent',
-          borderColor: '#dc3545',
-          lineTension: 0.4,
-          borderWidth: 1.5,
-        }, {
-          label: "Month",
-          data: [16, 30, 16, 30, 16, 36, 21, 35],
-          backgroundColor: 'transparent',
-          borderColor: '#f0ad4e',
-          lineTension: 0.4,
-          borderWidth: 1.5,
         }]
       },
       options: {
@@ -130,7 +116,7 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Nodes</span>
+                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Emails</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
@@ -141,7 +127,7 @@ function App(props) {
             
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Networks</span>
+                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Projects</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
@@ -152,7 +138,7 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Channels</span>
+                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Users</span>
                 </div>
                 <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
