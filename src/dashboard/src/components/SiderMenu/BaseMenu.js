@@ -11,6 +11,10 @@ import {
   DeploymentUnitOutlined,
   FunctionOutlined,
   UserOutlined,
+  BookOutlined,
+  CreditCardOutlined,
+
+  
 } from '@ant-design/icons';
 import { Link } from 'umi';
 import { urlToList } from '../_utils/pathTools';
