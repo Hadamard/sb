@@ -116,9 +116,9 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Emails</span>
+                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Nodes</span>
                 </div>
-                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p className="fs-normal mb-0">Nodes connected to your account</p>
               </div>
             </div>
           </div>
@@ -127,9 +127,9 @@ function App(props) {
             
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Projects</span>
+                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Networks</span>
                 </div>
-                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p className="fs-normal mb-0">Networks connected to your account</p>
               </div>
             </div>
           </div>
@@ -138,9 +138,9 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Users</span>
+                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Channels</span>
                 </div>
-                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p className="fs-normal mb-0">Channels connected to your account</p>
               </div>
             </div>
           </div>
@@ -151,13 +151,13 @@ function App(props) {
         <div className="row">
           <div className="col-lg-6">
             <div className="chart-container rounded-2 p-3">
-              <h3 className="fs-6 mb-3">Chart title number one</h3>
+              <h3 className="fs-6 mb-3">Operations</h3>
            <BarChart />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="chart-container rounded-2 p-3">
-              <h3 className="fs-6 mb-3">Chart title number two</h3>
+              <h3 className="fs-6 mb-3">Transactions</h3>
                 <LineChart />
             </div>
           </div>
@@ -197,7 +197,7 @@ function App(props) {
             <div className="box bg-warning p-3">
              
               <h3>5,154</h3>
-              <p className="lead">Product sales</p>
+              <p className="lead">Active</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
