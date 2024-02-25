@@ -1,21 +1,21 @@
 /*
  SPDX-License-Identifier: Apache-2.0
 */
-import exception from './en-US/exception';
-import globalHeader from './en-US/globalHeader';
-import login from './en-US/login';
-import menu from './en-US/menu';
-import pwa from './en-US/pwa';
-import component from './en-US/component';
-import Organization from './en-US/Organization';
-import User from './en-US/operatorUser';
-import form from './en-US/form';
-import Agent from './en-US/Agent';
-import Node from './en-US/Node';
-import fabricCa from './en-US/fabric/ca';
-import Network from './en-US/Network';
-import Channel from './en-US/Channel';
-import ChainCode from './en-US/Chaincode';
+import exception from './fr-FR/exception';
+import globalHeader from './fr-FR/globalHeader';
+import login from './fr-FR/login';
+import menu from './fr-FR/menu';
+import pwa from './fr-FR/pwa';
+import component from './fr-FR/component';
+import Organization from './fr-FR/Organization';
+import User from './fr-FR/operatorUser';
+import form from './fr-FR/form';
+import Agent from './fr-FR/Agent';
+import Node from './fr-FR/Node';
+import fabricCa from './fr-FR/fabric/ca';
+import Network from './fr-FR/Network';
+import Channel from './fr-FR/Channel';
+import ChainCode from './fr-FR/Chaincode';
 
 export default {
   'navBar.lang': 'Languages',
