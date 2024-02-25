@@ -30,8 +30,8 @@ const menus = {
   chaincode: <FunctionOutlined />,
   user: <UserOutlined />,
   agent: <DesktopOutlined />,
-  book: <BookOutlined />,
-  pay: <CreditCardOutlined />,
+  documentation: <BookOutlined />,
+  costmanagement: <CreditCardOutlined />,
 
 };
 
