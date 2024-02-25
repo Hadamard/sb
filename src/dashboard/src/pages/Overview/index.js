@@ -9,10 +9,10 @@ const BarChart = () => {
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "August", "September", "October", "November", "Dezember"],
+        labels: ["January", "February", "March", "April", "May", "June", "August", "September"],
         datasets: [{
           label: "Lost",
-          data: [45, 25, 40, 20, 60, 20, 35, 25, 8, 15, 22, 30],
+          data: [45, 25, 40, 20, 60, 20, 35, 25],
           backgroundColor: "#0d6efd",
           borderColor: 'transparent',
           borderWidth: 2.5,
@@ -20,7 +20,7 @@ const BarChart = () => {
         }, {
           label: "Success",
           startAngle: 2,
-          data: [20, 40, 20, 50, 25, 40, 25, 10, 12, 15, 22, 30],
+          data: [20, 40, 20, 50, 25, 40, 25, 10],
           backgroundColor: "#dc3545",
           borderColor: 'transparent',
           borderWidth: 2.5,
@@ -45,12 +45,26 @@ const LineChart = () => {
     new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "August", "September", "October", "November", "Dezember"],
+        labels: ["January", "February", "March", "April", "May", "June", "August", "September"],
         datasets: [{
           label: "My First dataset",
-          data: [4, 20, 5, 20, 5, 25, 9, 18, 12, 15, 22, 30],
+          data: [4, 20, 5, 20, 5, 25, 9, 18],
           backgroundColor: 'transparent',
           borderColor: '#0d6efd',
+          lineTension: 0.4,
+          borderWidth: 1.5,
+        }, {
+          label: "Month",
+          data: [11, 25, 10, 25, 10, 30, 14, 23],
+          backgroundColor: 'transparent',
+          borderColor: '#dc3545',
+          lineTension: 0.4,
+          borderWidth: 1.5,
+        }, {
+          label: "Month",
+          data: [16, 30, 16, 30, 16, 36, 21, 35],
+          backgroundColor: 'transparent',
+          borderColor: '#f0ad4e',
           lineTension: 0.4,
           borderWidth: 1.5,
         }]
@@ -116,9 +130,9 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Nodes</span>
+                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Emails</span>
                 </div>
-                <p className="fs-normal mb-0">Nodes connected to your account</p>
+                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
             </div>
           </div>
@@ -127,9 +141,9 @@ function App(props) {
             
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Networks</span>
+                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Projects</span>
                 </div>
-                <p className="fs-normal mb-0">Networks connected to your account</p>
+                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
             </div>
           </div>
@@ -138,9 +152,9 @@ function App(props) {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Channels</span>
+                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Users</span>
                 </div>
-                <p className="fs-normal mb-0">Channels connected to your account</p>
+                <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
               </div>
             </div>
           </div>
@@ -151,13 +165,13 @@ function App(props) {
         <div className="row">
           <div className="col-lg-6">
             <div className="chart-container rounded-2 p-3">
-              <h3 className="fs-6 mb-3">Operations</h3>
+              <h3 className="fs-6 mb-3">Chart title number one</h3>
            <BarChart />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="chart-container rounded-2 p-3">
-              <h3 className="fs-6 mb-3">Usage</h3>
+              <h3 className="fs-6 mb-3">Chart title number two</h3>
                 <LineChart />
             </div>
           </div>
