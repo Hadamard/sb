@@ -182,15 +182,15 @@ function App(props) {
           <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
             <div className="box bg-primary p-3">
             
-              <h3>5,154</h3>
-              <p className="lead">Page views</p>
+              <h3>Healthy</h3>
+              <p className="lead">Status</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
             <div className="box bg-danger p-3">
              
               <h3>245</h3>
-              <p className="lead">User registered</p>
+              <p className="lead">Network Requests</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
