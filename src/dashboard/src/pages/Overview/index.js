@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Chart from 'chart.js/auto'; // Auto-import für Chart.js
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JS importieren
-import './style.css'
+import './styles.css'
 
 const BarChart = () => {
   useEffect(() => {
