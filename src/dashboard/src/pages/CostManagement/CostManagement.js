@@ -30,11 +30,13 @@ class UserManagement extends PureComponent {
 
 
   render() {
-    const { modalVisible, modalMethod, selectedRows } = this.state;
+    const { modalVisible, modalMethod, selectedRows, targetNodeId } = this.state;
     const {
       user: { users, pagination, currentUser },
       organization: { organizations },
       loadingUsers,
+      nodes,
+      loadingNodes,
       creatingUser,
       dispatch,
       intl,
