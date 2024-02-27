@@ -47,48 +47,11 @@ const CreateUpdateForm = props => {
     form.submit();
   };
 
-  const onFinish = values => {
-    handleSubmit(
-      method,
-      {
-        ...values,
-        organization: orgID,
-      },
-      user
-    );
-  };
-  const validateEmail = async (rule, value) => {
-    if (value && !isEmail(value)) {
-      throw new Error(
-        intl.formatMessage({
-          id: 'app.user.form.email.noValid',
-          defaultMessage: 'Please input valid email',
-        })
-      );
-    }
-  };
-  const organizationOptions = organizations.map(org => (
-    <AutoCompleteOption key={org.id} value={org.name}>
-      {org.name}
-    </AutoCompleteOption>
-  ));
-  const onSelectOrganization = (value, option) => {
-    form.setFieldsValue({
-      organization: value,
-    });
-    orgID = option.key;
-  };
 
-  const validatePasswordConfirm = async (rule, value) => {
-    if (value && form.getFieldValue('password') !== value) {
-      throw new Error(
-        intl.formatMessage({
-          id: 'app.user.form.passwordConfirm.noValid',
-          defaultMessage: 'Inconsistent password input twice',
-        })
-      );
-    }
-  };
+
+ 
+
+
 
   return (
     <Modal
