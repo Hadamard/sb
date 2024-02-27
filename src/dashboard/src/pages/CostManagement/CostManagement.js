@@ -287,7 +287,7 @@ class UserManagement extends PureComponent {
        headers: {
            'Content-Type': 'application/json',
        },
-       body: JSON.stringify(visibleData),
+       body: JSON.stringify(data),
    })
    .then(response => response.json())
    .then(data => console.log('Erfolg:', data))
