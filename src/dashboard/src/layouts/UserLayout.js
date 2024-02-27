@@ -6,6 +6,7 @@ import SelectLang from '@/components/SelectLang';
 import getPageTitle from '@/utils/getPageTitle';
 import styles from './UserLayout.less';
 import { GoogleLogin } from 'react-google-login';
+import MicrosoftLogin from "react-microsoft-login";
 import Typer from '@/layouts/Typer';
 import './lays.css';
 
@@ -73,6 +74,8 @@ class UserLayout extends Component {
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
       />
+
+         <MicrosoftLogin clientId={"fe365654-42b9-4a60-a638-bdc9599c6f42"} authCallback={authHandler} />
         </div>
 
 
