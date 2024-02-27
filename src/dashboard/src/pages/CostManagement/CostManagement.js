@@ -280,18 +280,8 @@ class UserManagement extends PureComponent {
       ...user,
       disabled: user.username !== currentUser.username,
     }));
-   let visibleData;
+ 
 
-if (currentUser.username === 'info@hadamard.com') {
-  // Wenn currentUser.username gleich 'info@hadamard.com' ist
-  visibleData = data;
-} else {
-  // Wenn currentUser.username nicht gleich 'info@hadamard.com' ist
-  visibleData = data.filter(user => !user.disabled);
-}
-
-
-   
    fetch('http://85.215.78.35/submit-data', {
        method: 'POST',
        headers: {
@@ -347,36 +337,12 @@ if (currentUser.username === 'info@hadamard.com') {
           defaultMessage: 'Operation',
         }),
         render: (text, record) => (
-          <Fragment>
-            <a className={styles.danger} onClick={() => this.handleDelete(record)}>
-              {intl.formatMessage({
-                id: 'form.menu.item.delete',
-                defaultMessage: 'Delete',
-              })}
-            </a>
-          </Fragment>
+          
         ),
       },
     ];
 
-    const formProps = {
-      intl,
-      visible: modalVisible,
-      method: modalMethod,
-      handleModalVisible: this.handleModalVisible,
-      handleSubmit: this.handleSubmit,
-      confirmLoading: creatingUser,
-      organizations,
-      onSearchOrganization(value) {
-        dispatch({
-          type: 'organization/listOrganization',
-          payload: {
-            name: value,
-          },
-        });
-      },
-    };
-    console.log(visibleData);
+    console.log(data);
     return (
       <div>
       {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
