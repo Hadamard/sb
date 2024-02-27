@@ -41,6 +41,7 @@ class UserLayout extends Component {
 
 
 
+
   
   render() {
     const {
@@ -48,6 +49,9 @@ class UserLayout extends Component {
       location: { pathname },
       breadcrumbNameMap,
     } = this.props;
+    const authHandler = (err, data) => {
+    console.log(err, data);
+      };
     return (
       <DocumentTitle title={getPageTitle(pathname, breadcrumbNameMap)}>
         <div className={styles.container}>
