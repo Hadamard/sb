@@ -56,7 +56,7 @@ class UserManagement extends PureComponent {
    .catch((error) => console.error('Fehler:', error));
    
    console.log(data);
-   
+   console.log(currentUser.username);
     return (
       <div>
       {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
