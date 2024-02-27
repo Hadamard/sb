@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { connect, injectIntl } from 'umi';
 import Chart from 'chart.js/auto'; // Auto-import für Chart.js
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JS importieren
 import './styles.css';
