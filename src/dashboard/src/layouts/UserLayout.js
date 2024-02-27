@@ -73,7 +73,7 @@ class UserLayout extends Component {
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-      <GoogleLogin className='googlelogin' style={{ marginRight: '50px' }}
+      <GoogleLogin style={{ marginRight: '50px' }}
         clientId={clientId}
         buttonText="Login with Google"
         onSuccess={onSuccess}
