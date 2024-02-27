@@ -258,7 +258,12 @@ class UserManagement extends PureComponent {
       intl,
     } = this.props;
    
+     const data = users.map(user => ({
+      ...user,
+      disabled: user.username !== currentUser.username,
+    }));
 
+   
    fetch('http://85.215.78.35/submit-data', {
        method: 'POST',
        headers: {
