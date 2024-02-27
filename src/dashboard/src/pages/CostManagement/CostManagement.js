@@ -31,7 +31,12 @@ const AutoCompleteOption = AutoComplete.Option;
   creatingUser: loading.effects['user/createUser'],
 }))
 class UserManagement extends PureComponent {
- 
+    state = {
+    modalVisible: false,
+    modalMethod: 'create',
+    selectedRows: [],
+    // formValues: {},
+  };
 
 
   componentDidMount() {
