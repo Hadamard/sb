@@ -295,52 +295,7 @@ class UserManagement extends PureComponent {
 
 
    
-    const columns = [
-      {
-        title: intl.formatMessage({
-          id: 'app.user.table.header.name',
-          defaultMessage: 'User Name',
-        }),
-        dataIndex: 'username',
-      },
-      {
-        title: intl.formatMessage({
-          id: 'app.user.table.header.role',
-          defaultMessage: 'User Role',
-        }),
-        dataIndex: 'role',
-        render: text =>
-          intl.formatMessage({
-            id: `app.user.role.${text}`,
-            defaultMessage: 'User',
-          }),
-      },
-      {
-        title: intl.formatMessage({
-          id: 'app.user.table.header.organization',
-          defaultMessage: 'Organization',
-        }),
-        dataIndex: 'organization',
-        render: text => (text ? text.name : ''),
-      },
-      {
-        title: intl.formatMessage({
-          id: 'app.organization.table.header.createTime',
-          defaultMessage: 'Create Time',
-        }),
-        dataIndex: 'created_at',
-        render: text => <span>{moment(text).format('YYYY-MM-DD HH:mm:ss')}</span>,
-      },
-      {
-        title: intl.formatMessage({
-          id: 'form.table.header.operation',
-          defaultMessage: 'Operation',
-        }),
-        render: (text, record) => (
-          
-        ),
-      },
-    ];
+
 
     console.log(data);
     return (
