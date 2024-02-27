@@ -1,6 +1,17 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
-
+import {
+  Card,
+  Button,
+  Form,
+  Modal,
+  Input,
+  Select,
+  message,
+  Dropdown,
+  Menu,
+  AutoComplete,
+} from 'antd';
 import { DownOutlined, PlusOutlined, UserOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import isEmail from 'validator/lib/isEmail';
@@ -20,13 +31,7 @@ const AutoCompleteOption = AutoComplete.Option;
   creatingUser: loading.effects['user/createUser'],
 }))
 class UserManagement extends PureComponent {
-  state = {
-    modalVisible: false,
-    modalMethod: 'create',
-    selectedRows: [],
-    // formValues: {},
-  };
-
+ 
 
 
   componentDidMount() {
