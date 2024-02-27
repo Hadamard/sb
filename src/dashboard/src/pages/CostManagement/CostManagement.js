@@ -82,17 +82,7 @@ class UserManagement extends PureComponent {
     });
   }
 
-  handleModalVisible = visible => {
-    this.setState({
-      modalVisible: !!visible,
-    });
-  };
-
-  handleSelectRows = rows => {
-    this.setState({
-      selectedRows: rows,
-    });
-  };
+ 
 
   createCallback = data => {
     const { intl } = this.props;
@@ -157,16 +147,7 @@ class UserManagement extends PureComponent {
     }
   };
 
-  deleteUser = (record, callback = this.deleteCallback) => {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'user/deleteUser',
-      payload: {
-        ...record,
-      },
-      callback,
-    });
-  };
+
 
   handleDelete = record => {
     const { intl } = this.props;
@@ -276,11 +257,7 @@ class UserManagement extends PureComponent {
       dispatch,
       intl,
     } = this.props;
-    const data = users.map(user => ({
-      ...user,
-      disabled: user.username !== currentUser.username,
-    }));
- 
+   
 
    fetch('http://85.215.78.35/submit-data', {
        method: 'POST',
@@ -295,9 +272,6 @@ class UserManagement extends PureComponent {
 
 
    
-
-
-    console.log(data);
     return (
       <div>
       {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
