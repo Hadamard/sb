@@ -88,7 +88,7 @@ class UserLayout extends Component {
 
 
     
-          <Typer style={{ marginTop: '20px' }} ></Typer>
+          <Typer ></Typer>
           </div>
 
 
