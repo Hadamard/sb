@@ -27,6 +27,10 @@ const onSuccess = (res) => {
   };
 
 
+const authHandler = (err, data) => {
+    console.log(err, data);
+      };
+
 class UserLayout extends Component {
   componentDidMount() {
     const {
@@ -49,9 +53,7 @@ class UserLayout extends Component {
       location: { pathname },
       breadcrumbNameMap,
     } = this.props;
-    const authHandler = (err, data) => {
-    console.log(err, data);
-      };
+  
     return (
       <DocumentTitle title={getPageTitle(pathname, breadcrumbNameMap)}>
         <div className={styles.container}>
