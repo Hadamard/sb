@@ -74,84 +74,9 @@ const CreateUpdateForm = props => {
           email: method === 'create' ? '' : user.email,
         }}
       >
-        <FormItem
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 15 }}
-          label={intl.formatMessage({
-            id: 'app.user.form.name.label',
-            defaultMessage: 'User Name',
-          })}
-          name="username"
-          rules={[
-            {
-              required: true,
-              message: intl.formatMessage({
-                id: 'app.user.form.name.required',
-                defaultMessage: 'Please input user name',
-              }),
-              min: 1,
-            },
-          ]}
-        >
-          <Input
-            placeholder={intl.formatMessage({
-              id: 'form.input.placeholder',
-              defaultMessage: 'Please input',
-            })}
-          />
-        </FormItem>
-        <FormItem
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 15 }}
-          label={intl.formatMessage({
-            id: 'app.user.form.role.label',
-            defaultMessage: 'User Role',
-          })}
-          name="role"
-        >
-          <Select>
-            <Option value="user">
-              {intl.formatMessage({
-                id: 'app.user.role.user',
-                defaultMessage: 'User',
-              })}
-            </Option>
-            <Option value="administrator">
-              {intl.formatMessage({
-                id: 'app.user.role.administrator',
-                defaultMessage: 'Administrator',
-              })}
-            </Option>
-          </Select>
-        </FormItem>
-        <FormItem
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 15 }}
-          label={intl.formatMessage({
-            id: 'app.user.form.email.label',
-            defaultMessage: 'Email',
-          })}
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: intl.formatMessage({
-                id: 'app.user.form.email.required',
-                defaultMessage: 'Please input email',
-              }),
-            },
-            {
-              validator: validateEmail,
-            },
-          ]}
-        >
-          <Input
-            placeholder={intl.formatMessage({
-              id: 'form.input.placeholder',
-              defaultMessage: 'Please input',
-            })}
-          />
-        </FormItem>
+   
+    
+
         <FormItem
           labelCol={{ span: 5 }}
           wrapperCol={{ span: 15 }}
