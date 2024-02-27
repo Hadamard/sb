@@ -88,7 +88,7 @@ const LineChart = () => {
 
 
 function App(props) {
-   console.log(this.props); 
+   console.log(props); 
   return (
     <div className='App'>
      <head>
