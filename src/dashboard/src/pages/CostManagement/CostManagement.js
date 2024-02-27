@@ -28,61 +28,9 @@ const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
 
-const CreateUpdateForm = props => {
-  const {
-    visible,
-    method,
-    handleSubmit,
-    handleModalVisible,
-    confirmLoading,
-    user,
-    organizations,
-    onSearchOrganization,
-    intl,
-  } = props;
-  const [form] = Form.useForm();
-  const userRole = getAuthority()[0];
-  let orgID = '';
-  const onSubmit = () => {
-    form.submit();
-  };
 
 
 
- 
-
-
-
-  return (
-     <div>
-      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
-    </div>
-  );
-};
-
-@connect(({ user, organization, loading }) => ({
-  user,
-  organization,
-  loadingUsers: loading.effects['user/fetch'],
-  creatingUser: loading.effects['user/createUser'],
-}))
-class UserManagement extends PureComponent {
-  state = {
-    modalVisible: false,
-    modalMethod: 'create',
-    selectedRows: [],
-    // formValues: {},
-  };
-
-  componentDidMount() {
-    const { dispatch } = this.props;
-
-    dispatch({
-      type: 'user/fetch',
-    });
-  }
-
- 
 
   createCallback = data => {
     const { intl } = this.props;
