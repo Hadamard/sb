@@ -22,37 +22,7 @@ const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
 
 
-const CreateUpdateForm = props => {
-  const {
-    visible,
-    method,
-    handleSubmit,
-    handleModalVisible,
-    confirmLoading,
-    user,
-    organizations,
-    onSearchOrganization,
-    intl,
-  } = props;
-  const [form] = Form.useForm();
-  const userRole = getAuthority()[0];
-  let orgID = '';
-  const onSubmit = () => {
-    form.submit();
-  };
 
-
-
-
-
-
-
-  return (
-     <div>
-      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
-    </div>
-  );
-};
 
 @connect(({ user, organization, loading }) => ({
   user,
