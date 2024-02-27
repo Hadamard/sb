@@ -54,6 +54,20 @@ const CreateUpdateForm = props => {
   );
 };
 
+@connect(({ user, organization, loading }) => ({
+  user,
+  organization,
+  loadingUsers: loading.effects['user/fetch'],
+  creatingUser: loading.effects['user/createUser'],
+}))
+class UserManagement extends PureComponent {
+  state = {
+    modalVisible: false,
+    modalMethod: 'create',
+    selectedRows: [],
+    // formValues: {},
+  };
+
 
 
   componentDidMount() {
