@@ -2,7 +2,8 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
 import {Card,Button,Form,Modal,Input,Select,message,Dropdown,Menu,AutoComplete,} from 'antd';
 
-@connect(({ user, organization, loading }) => ({
+@connect(({ node, user, organization, loading }) => ({
+  node,
   user,
   organization,
   loadingUsers: loading.effects['user/fetch'],
