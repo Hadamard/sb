@@ -585,16 +585,7 @@ if (currentUser.username === 'info@hadamard.com') {
         });
       },
     };
-    const menu = (
-      <Menu onClick={this.handleMenuClick} selectedKeys={[]}>
-        <Menu.Item key="remove">
-          {intl.formatMessage({
-            id: 'form.menu.item.delete',
-            defaultMessage: 'Delete',
-          })}
-        </Menu.Item>
-      </Menu>
-    );
+
     return (
       <PageHeaderWrapper
         title={
@@ -611,19 +602,7 @@ if (currentUser.username === 'info@hadamard.com') {
           <div className={styles.tableList}>
             <div className={styles.tableListOperator}>
              
-              {selectedRows.length > 0 && (
-                <span>
-                  <Dropdown overlay={menu}>
-                    <Button>
-                      {intl.formatMessage({
-                        id: 'form.button.moreActions',
-                        defaultMessage: 'More Actions',
-                      })}{' '}
-                      <DownOutlined />
-                    </Button>
-                  </Dropdown>
-                </span>
-              )}
+             
             </div>
             <RedTable
               selectedRows={selectedRows}
