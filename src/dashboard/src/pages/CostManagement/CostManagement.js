@@ -78,69 +78,6 @@ class UserManagement extends PureComponent {
 
 
 
- 
-  handleSubmit = (method, values) => {
-    const {
-      dispatch,
-      user: {
-        currentUser: { organization = {} },
-      },
-    } = this.props;
-    const userRole = getAuthority()[0];
-    // eslint-disable-next-line no-param-reassign
-    delete values.passwordConfirm;
-    if (userRole === 'administrator' && organization.id) {
-      // eslint-disable-next-line no-param-reassign
-      values.organization = organization.id;
-    }
-    switch (method) {
-      case 'create':
-        dispatch({
-          type: 'user/createUser',
-          payload: values,
-          callback: this.createCallback,
-        });
-        break;
-      default:
-        break;
-    }
-  };
-  handleMenuClick = e => {
-    const { selectedRows } = this.state;
-    const { intl } = this.props;
-    let names = [];
-    switch (e.key) {
-      case 'remove':
-        names = selectedRows.map(item => item.username);
-        Modal.confirm({
-          title: intl.formatMessage({
-            id: 'app.user.form.delete.title',
-            defaultMessage: 'Delete User',
-          }),
-          content: intl.formatMessage(
-            {
-              id: 'app.user.form.delete.content',
-              defaultMessage: 'Confirm to delete user {name}',
-            },
-            {
-              name: names.join(', '),
-            }
-          ),
-          okText: intl.formatMessage({ id: 'form.button.confirm', defaultMessage: 'Confirm' }),
-          cancelText: intl.formatMessage({ id: 'form.button.cancel', defaultMessage: 'Cancel' }),
-          onOk: () => {
-            selectedRows.map(user => this.deleteUser(user));
-            this.setState({
-              selectedRows: [],
-            });
-            Modal.destroyAll();
-          },
-        });
-        break;
-      default:
-        break;
-    }
-  };
   render() {
     const { modalVisible, modalMethod, selectedRows } = this.state;
     const {
