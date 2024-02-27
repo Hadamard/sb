@@ -587,39 +587,7 @@ if (currentUser.username === 'info@hadamard.com') {
     };
     console.log(visibleData);
     return (
-      <PageHeaderWrapper
-        title={
-          <span>
-            {<UserOutlined style={{ marginRight: 15 }} />}
-            {intl.formatMessage({
-              id: 'app.user.title',
-              defaultMessage: 'User Management',
-            })}
-          </span>
-        }
-      >
-        <Card bordered={false}>
-          <div className={styles.tableList}>
-            <div className={styles.tableListOperator}>
-             
-             
-            </div>
-            <RedTable
-              selectedRows={selectedRows}
-              loading={loadingUsers}
-              rowKey="id"
-              data={{
-                list: visibleData,
-                pagination,
-              }}
-              columns={columns}
-              onSelectRow={this.handleSelectRows}
-              onChange={this.handleTableChange}
-            />
-          </div>
-        </Card>
-        <CreateUpdateForm {...formProps} />
-      </PageHeaderWrapper>
+  
     );
   }
 }
