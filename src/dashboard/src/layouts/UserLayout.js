@@ -73,7 +73,7 @@ class UserLayout extends Component {
 
 <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-      <GoogleLogin className='googlelogin' style={{ marginRight: '20px' }}
+      <GoogleLogin className='googlelogin' style={{ marginRight: '50px' }}
         clientId={clientId}
         buttonText="Login with Google"
         onSuccess={onSuccess}
@@ -88,7 +88,7 @@ class UserLayout extends Component {
 
 
     
-          <Typer></Typer>
+          <Typer style={{ marginTop: '20px' }} ></Typer>
           </div>
 
 
