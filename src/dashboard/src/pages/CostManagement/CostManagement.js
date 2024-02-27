@@ -6,6 +6,7 @@ import {Card,Button,Form,Modal,Input,Select,message,Dropdown,Menu,AutoComplete,}
   node,
   user,
   organization,
+  loadingNodes: loading.effects['node/listNode'],
   loadingUsers: loading.effects['user/fetch'],
   creatingUser: loading.effects['user/createUser'],
 }))
@@ -58,7 +59,7 @@ class UserManagement extends PureComponent {
    console.log(data);
    console.log(currentUser.username);
     console.log(currentUser);
-    console.log(dataIndex);
+    console.log(nodes);
    
 
     
