@@ -587,7 +587,9 @@ if (currentUser.username === 'info@hadamard.com') {
     };
     console.log(visibleData);
     return (
-  
+      <div>
+      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
+    </div>
     );
   }
 }
