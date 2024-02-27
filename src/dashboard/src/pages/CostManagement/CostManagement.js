@@ -17,14 +17,17 @@ import moment from 'moment';
 import isEmail from 'validator/lib/isEmail';
 
 import { getAuthority } from '@/utils/authority';
-const FormItem = Form.Item;
-const Option = Select.Option;
-const AutoCompleteOption = AutoComplete.Option;
 
 
 
 
 
+@connect(({ user, organization, loading }) => ({
+  user,
+  organization,
+  loadingUsers: loading.effects['user/fetch'],
+  creatingUser: loading.effects['user/createUser'],
+}))
 class UserManagement extends PureComponent {
     state = {
     modalVisible: false,
