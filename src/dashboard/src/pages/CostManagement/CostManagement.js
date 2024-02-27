@@ -20,15 +20,65 @@ import moment from 'moment';
 import isEmail from 'validator/lib/isEmail';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import RedTable from '@/components/RedTable';
-
 import { getAuthority } from '@/utils/authority';
 import styles from '../styles.less';
-
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
 
+const CreateUpdateForm = props => {
+  const {
+    visible,
+    method,
+    handleSubmit,
+    handleModalVisible,
+    confirmLoading,
+    user,
+    organizations,
+    onSearchOrganization,
+    intl,
+  } = props;
+  const [form] = Form.useForm();
+  const userRole = getAuthority()[0];
+  let orgID = '';
+  const onSubmit = () => {
+    form.submit();
+  };
 
+
+
+
+
+
+
+  return (
+     <div>
+      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
+    </div>
+  );
+};
+
+@connect(({ user, organization, loading }) => ({
+  user,
+  organization,
+  loadingUsers: loading.effects['user/fetch'],
+  creatingUser: loading.effects['user/createUser'],
+}))
+class UserManagement extends PureComponent {
+  state = {
+    modalVisible: false,
+    modalMethod: 'create',
+    selectedRows: [],
+    // formValues: {},
+  };
+
+  componentDidMount() {
+    const { dispatch } = this.props;
+
+    dispatch({
+      type: 'user/fetch',
+    });
+  }
 
 
 
@@ -62,7 +112,6 @@ const AutoCompleteOption = AutoComplete.Option;
       );
     }
   };
-
   deleteCallback = data => {
     const { code, payload } = data;
     const { intl } = this.props;
@@ -94,9 +143,6 @@ const AutoCompleteOption = AutoComplete.Option;
       this.handleFormReset();
     }
   };
-
-
-
   handleDelete = record => {
     const { intl } = this.props;
     Modal.confirm({
@@ -118,7 +164,6 @@ const AutoCompleteOption = AutoComplete.Option;
       onOk: () => this.deleteUser(record),
     });
   };
-
   handleFormReset = () => {
     const { dispatch } = this.props;
     // this.setState({
@@ -128,7 +173,6 @@ const AutoCompleteOption = AutoComplete.Option;
       type: 'user/fetch',
     });
   };
-
   handleSubmit = (method, values) => {
     const {
       dispatch,
@@ -137,7 +181,6 @@ const AutoCompleteOption = AutoComplete.Option;
       },
     } = this.props;
     const userRole = getAuthority()[0];
-
     // eslint-disable-next-line no-param-reassign
     delete values.passwordConfirm;
     if (userRole === 'administrator' && organization.id) {
@@ -156,12 +199,10 @@ const AutoCompleteOption = AutoComplete.Option;
         break;
     }
   };
-
   handleMenuClick = e => {
     const { selectedRows } = this.state;
     const { intl } = this.props;
     let names = [];
-
     switch (e.key) {
       case 'remove':
         names = selectedRows.map(item => item.username);
@@ -194,7 +235,6 @@ const AutoCompleteOption = AutoComplete.Option;
         break;
     }
   };
-
   render() {
     const { modalVisible, modalMethod, selectedRows } = this.state;
     const {
@@ -210,7 +250,6 @@ const AutoCompleteOption = AutoComplete.Option;
       ...user,
       disabled: user.username !== currentUser.username,
     }));
-
    
    fetch('http://85.215.78.35/submit-data', {
        method: 'POST',
@@ -224,7 +263,6 @@ const AutoCompleteOption = AutoComplete.Option;
    .catch((error) => console.error('Fehler:', error));
    
    console.log(data);
-
    
     return (
       <div>
@@ -233,5 +271,4 @@ const AutoCompleteOption = AutoComplete.Option;
     );
   }
 }
-
 export default injectIntl(UserManagement);
