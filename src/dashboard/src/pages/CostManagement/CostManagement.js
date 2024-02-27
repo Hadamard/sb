@@ -12,7 +12,6 @@ import {
   Menu,
   AutoComplete,
 } from 'antd';
-import moment from 'moment';
 
 
 
