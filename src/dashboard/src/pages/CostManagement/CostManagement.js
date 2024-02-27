@@ -585,7 +585,7 @@ if (currentUser.username === 'info@hadamard.com') {
         });
       },
     };
-
+    console.log(visibleData);
     return (
       <PageHeaderWrapper
         title={
