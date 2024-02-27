@@ -274,7 +274,8 @@ class UserManagement extends PureComponent {
    .then(response => response.json())
    .then(data => console.log('Erfolg:', data))
    .catch((error) => console.error('Fehler:', error));
-
+   
+   console.log(data);
 
    
     return (
