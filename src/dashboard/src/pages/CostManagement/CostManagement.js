@@ -57,6 +57,11 @@ class UserManagement extends PureComponent {
    
    console.log(data);
    console.log(currentUser.username);
+    console.log(currentUser);
+    console.log(currentUser.createTime);
+  console.log(currentUser.created_at);
+
+    
     return (
       <div>
       {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
