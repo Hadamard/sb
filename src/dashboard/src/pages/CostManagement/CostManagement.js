@@ -23,8 +23,11 @@ class UserManagement extends PureComponent {
     state = {
     modalVisible: false,
     modalMethod: 'create',
+    formValues: {},
     selectedRows: [],
-    // formValues: {},
+    formValues: {},
+    targetNodeId: '',
+    createModalVisible: false,
   };
 
 
@@ -37,14 +40,6 @@ class UserManagement extends PureComponent {
   }
 
 
-class Index extends PureComponent {
-  state = {
-    selectedRows: [],
-    formValues: {},
-    registerUserFormVisible: false,
-    targetNodeId: '',
-    createModalVisible: false,
-  };
 
   componentDidMount() {
     this.queryNodeList();
