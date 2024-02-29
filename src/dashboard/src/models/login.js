@@ -59,7 +59,7 @@ export default {
           msg: response.status === 'successful' ? 'Register successfully!' : response.msg,
           
         },
-        alert("test");
+   
       });
     },
 
