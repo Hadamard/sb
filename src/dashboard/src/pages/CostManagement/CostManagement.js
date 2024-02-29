@@ -52,7 +52,7 @@ class UserManagement extends PureComponent {
    console.log(data);
    console.log(currentUser.username);
     console.log(currentUser);
-    console.log(nodes);
+    console.log(map);
    
 
     
