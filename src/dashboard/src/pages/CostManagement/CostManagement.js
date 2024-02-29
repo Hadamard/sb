@@ -43,8 +43,8 @@ class UserManagement extends PureComponent {
     } = this.props;
    
      const data = users.map(user => ({
-      ...user,
-      disabled: user.username !== currentUser.username,
+      ...user
+     
     }));
    
 
@@ -52,7 +52,7 @@ class UserManagement extends PureComponent {
    console.log(data);
    console.log(currentUser.username);
     console.log(currentUser);
-    console.log(map);
+    
    
 
     
