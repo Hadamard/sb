@@ -1,6 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
-import {Card,Button,Form,Modal,message,Menu} from 'antd';
 
 @connect(({ network, node, user, organization, loading }) => ({
   node,
