@@ -13,14 +13,7 @@ import {Card,Button,Form,Modal,Input,Select,message,Dropdown,Menu,AutoComplete,}
   loadingNetworks: loading.effects['network/listNetwork'],
 }))
 class UserManagement extends PureComponent {
-    state = {
-    modalVisible: false,
-    modalMethod: 'create',
-    selectedRows: [],
-    // formValues: {},
-  };
-
-
+    
   componentDidMount() {
     const { dispatch } = this.props;
 
@@ -30,9 +23,8 @@ class UserManagement extends PureComponent {
   }
 
 
-
   render() {
-    const { modalVisible, modalMethod, selectedRows } = this.state;
+    
     const {
       user: { users, pagination, currentUser },
       organization: { organizations },
