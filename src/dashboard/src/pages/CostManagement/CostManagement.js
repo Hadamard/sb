@@ -2,13 +2,15 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
 import {Card,Button,Form,Modal,Input,Select,message,Dropdown,Menu,AutoComplete,} from 'antd';
 
-@connect(({ node, user, organization, loading }) => ({
+@connect(({ network, node, user, organization, loading }) => ({
   node,
   user,
   organization,
   loadingNodes: loading.effects['node/listNode'],
   loadingUsers: loading.effects['user/fetch'],
   creatingUser: loading.effects['user/createUser'],
+  network,
+  loadingNetworks: loading.effects['network/listNetwork'],
 }))
 class UserManagement extends PureComponent {
     state = {
@@ -30,7 +32,7 @@ class UserManagement extends PureComponent {
 
 
   render() {
-    const { modalVisible, modalMethod, selectedRows, targetNodeId } = this.state;
+    const { modalVisible, modalMethod, selectedRows } = this.state;
     const {
       user: { users, pagination, currentUser },
       organization: { organizations },
@@ -51,7 +53,7 @@ class UserManagement extends PureComponent {
    console.log(users);
    console.log(currentUser.username);
    console.log(nodes);
-   
+   console.log(networks);
 
     
     return (
