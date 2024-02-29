@@ -10,24 +10,12 @@ import {Card,Button,Form,Modal,Input,Select,message,Dropdown,Menu,AutoComplete,}
   loadingUsers: loading.effects['user/fetch'],
   creatingUser: loading.effects['user/createUser'],
 }))
-
-@connect(({ node, loading }) => ({
-  node,
-  loadingNodes: loading.effects['node/listNode'],
-  registeringUser: loading.effects['node/registerUserToNode'],
-  creating: loading.effects['node/createNode'],
-}))
-
-  
 class UserManagement extends PureComponent {
     state = {
     modalVisible: false,
     modalMethod: 'create',
-    formValues: {},
     selectedRows: [],
-    formValues: {},
-    targetNodeId: '',
-    createModalVisible: false,
+    // formValues: {},
   };
 
 
@@ -41,19 +29,6 @@ class UserManagement extends PureComponent {
 
 
 
-  componentDidMount() {
-    this.queryNodeList();
-  }
-
-  componentWillUnmount() {
-    const { dispatch } = this.props;
-
-    dispatch({
-      type: 'node/clear',
-    });
-  }
-
-  
   render() {
     const { modalVisible, modalMethod, selectedRows, targetNodeId } = this.state;
     const {
