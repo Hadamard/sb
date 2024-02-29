@@ -42,14 +42,11 @@ class UserManagement extends PureComponent {
       intl,
     } = this.props;
    
-     const data = users.map(user => ({
-      ...user
      
-    }));
    
 
    
-   console.log(data);
+   console.log(users);
    console.log(currentUser.username);
     console.log(currentUser);
     
