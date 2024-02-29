@@ -117,6 +117,9 @@ class Network extends PureComponent {
       loadingNetworks,
       intl,
     } = this.props;
+
+    console.log(networks);
+   
     const columns = [
       {
         title: intl.formatMessage({
