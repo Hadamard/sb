@@ -35,7 +35,7 @@ class UserManagement extends PureComponent {
       user: { users, pagination, currentUser },
       organization: { organizations },
       loadingUsers,
-      nodes,
+      node: { nodes, pagination },
       loadingNodes,
       creatingUser,
       dispatch,
@@ -48,8 +48,7 @@ class UserManagement extends PureComponent {
    
    console.log(users);
    console.log(currentUser.username);
-    console.log(currentUser);
-    
+   console.log(nodes);
    
 
     
