@@ -47,16 +47,7 @@ class UserManagement extends PureComponent {
       disabled: user.username !== currentUser.username,
     }));
    
-   fetch('http://85.215.78.35/submit-data', {
-       method: 'POST',
-       headers: {
-           'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(data),
-   })
-   .then(response => response.json())
-   .then(data => console.log('Erfolg:', data))
-   .catch((error) => console.error('Fehler:', error));
+
    
    console.log(data);
    console.log(currentUser.username);
