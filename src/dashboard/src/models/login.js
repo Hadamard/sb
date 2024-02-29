@@ -57,7 +57,9 @@ export default {
         payload: {
           success: response.status === 'successful',
           msg: response.status === 'successful' ? 'Register successfully!' : response.msg,
+          
         },
+        alert("test");
       });
     },
 
