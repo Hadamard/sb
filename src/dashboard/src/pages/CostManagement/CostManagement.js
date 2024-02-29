@@ -37,6 +37,8 @@ class UserManagement extends PureComponent {
       loadingUsers,
       node: { nodes },
       loadingNodes,
+      network: { networks },
+      loadingNetworks,
       creatingUser,
       dispatch,
       intl,
