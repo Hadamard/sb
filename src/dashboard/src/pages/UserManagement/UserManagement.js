@@ -275,6 +275,9 @@ const CreateUpdateForm = props => {
   loadingUsers: loading.effects['user/fetch'],
   creatingUser: loading.effects['user/createUser'],
 }))
+
+
+ 
 class UserManagement extends PureComponent {
   state = {
     modalVisible: false,
@@ -485,6 +488,8 @@ class UserManagement extends PureComponent {
       dispatch,
       intl,
     } = this.props;
+
+   console.log(this.props);
     const data = users.map(user => ({
       ...user,
       disabled: user.username !== currentUser.username,
