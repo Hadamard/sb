@@ -80,8 +80,7 @@ const LineChart = () => {
 };
 
 
-import React, { PureComponent, Fragment } from 'react';
-import { connect, injectIntl } from 'umi';
+
 @connect(({channel, network, node, user, loading }) => ({
   channel,
   node,
