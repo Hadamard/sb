@@ -81,7 +81,7 @@ class UserLayout extends Component {
         cookiePolicy={'single_host_origin'}
       />
 
-         <MicrosoftLogin clientId={"fe365654-42b9-4a60-a638-bdc9599c6f42"} authCallback={authHandler} />
+         <MicrosoftLogin clientId={"a71bc8d8-e3bd-4b9f-9c7a-654a2c8c4006"} authCallback={authHandler} />
         </div>
 
 
