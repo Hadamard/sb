@@ -1,36 +1,45 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
-@connect(({ network, loading }) => ({
+@connect(({ network, node, user, organization, loading }) => ({
+  node,
+  user,
+  organization,
   network,
-  loadingNetworks: loading.effects['network/listNetwork'],
 }))
          
 class UserManagement extends PureComponent {
     
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch({
-      type: 'network/listNetwork',
+
+     dispatch({
+      type: 'user/fetch',
+
     });
+        dispatch({
+      type: 'network/listNetwork',
+
+    });
+   
   }
   render() {
     
-   const {
-      network: { networks, pagination },
-      loadingNetworks,
+    const {
+      user: { users, pagination, currentUser },
+      organization: { organizations },
+      node: { nodes },
+      network: { networks },
+      dispatch,
       intl,
     } = this.props;
    
      
-
-
-
+   
+   
    console.log(users);
    console.log(currentUser.username);
-
    console.log(networks);
-
-
+    
     return (
       <div>
       {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
