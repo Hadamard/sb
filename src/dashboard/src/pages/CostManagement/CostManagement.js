@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
-@connect(({ network, node, user, organization, loading }) => ({
+@connect(({ channel, network, node, user, organization, loading }) => ({
+  channel,
   node,
   user,
   organization,
@@ -16,6 +17,7 @@ class UserManagement extends PureComponent {
       type: 'user/fetch',
        type: 'network/listNetwork',
       type: 'node/listNode',
+      type: 'channel/listChannel',
 
     });
        
