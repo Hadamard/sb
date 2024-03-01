@@ -80,51 +80,39 @@ const LineChart = () => {
 };
 
 
-@connect(({ network, node, user, organization, loading }) => ({
+import React, { PureComponent, Fragment } from 'react';
+import { connect, injectIntl } from 'umi';
+@connect(({channel, network, node, user, loading }) => ({
+  channel,
   node,
   user,
-  organization,
-  loadingNodes: loading.effects['node/listNode'],
-  loadingUsers: loading.effects['user/fetch'],
-  creatingUser: loading.effects['user/createUser'],
   network,
-  loadingNetworks: loading.effects['network/listNetwork'],
 }))
+         
 class UserManagement extends PureComponent {
     
-  componentDidMount() {
-    const { dispatch } = this.props;
+componentDidMount() {
+  const { dispatch } = this.props;
 
-    dispatch({
-      type: 'user/fetch',
-     
-    });
-  }
-
+  dispatch({ type: 'user/fetch' });
+  dispatch({ type: 'network/listNetwork' });
+  dispatch({ type: 'node/listNode' });
+  dispatch({ type: 'channel/listChannel' });
+}
 
   render() {
     
     const {
       user: { users, pagination, currentUser },
-      organization: { organizations },
-      loadingUsers,
       node: { nodes },
-      loadingNodes,
       network: { networks },
-      loadingNetworks,
-      creatingUser,
-      dispatch,
-      intl,
+      channel: { channels }, 
+
     } = this.props;
    
      
    
-
-   
-   console.log(users);
-   console.log(currentUser.username);
-   console.log(nodes);
-   console.log(networks);
+    console.log(this.props);
 
     
     return (
@@ -134,6 +122,7 @@ class UserManagement extends PureComponent {
     );
   }
 }
+
 
 
 
