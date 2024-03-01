@@ -134,7 +134,7 @@ componentDidMount() {
       <div className="welcome">
         <div className="content rounded-3 p-3">
           <h1 className="fs-3">Hadamard Hyperledger</h1>
-          <p className="mb-0">Welcome to your awesome Hyperledger dashboard, {currentUser.username}!</p>
+          <p className="mb-0">Welcome to the Hyperledger dashboard, {currentUser.username}!</p>
         </div>
       </div>
   
