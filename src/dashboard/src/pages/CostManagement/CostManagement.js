@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
-import { connect, injectIntl } from 'umi';
+import { connect, injectIntl, history  } from 'umi';
 
 
 @connect(({ network, loading }) => ({
