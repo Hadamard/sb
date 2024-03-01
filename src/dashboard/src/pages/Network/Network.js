@@ -110,6 +110,8 @@ class Network extends PureComponent {
     }
   };
 
+
+ 
   render() {
     const { selectedRows } = this.state;
     const {
@@ -118,7 +120,8 @@ class Network extends PureComponent {
       intl,
     } = this.props;
 
-    
+    console.log(this.state);
+   console.log(this.props);
    
     const columns = [
       {
