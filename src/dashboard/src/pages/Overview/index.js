@@ -145,7 +145,7 @@ componentDidMount() {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Nodes</span>
+                  <h3 className="mb-0">{nodes.length}</h3> <span className="d-block ms-2">Nodes</span>
                 </div>
                 <p className="fs-normal mb-0">Nodes connected to your account</p>
               </div>
