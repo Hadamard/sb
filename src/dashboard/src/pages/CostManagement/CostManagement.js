@@ -1,10 +1,9 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
-@connect(({channel, network, node, user, organization, loading }) => ({
+@connect(({channel, network, node, user, loading }) => ({
   channel,
   node,
   user,
-  organization,
   network,
 }))
          
@@ -27,12 +26,10 @@ class UserManagement extends PureComponent {
     
     const {
       user: { users, pagination, currentUser },
-      organization: { organizations },
       node: { nodes },
       network: { networks },
       channel: { channels }, 
-      dispatch,
-      intl,
+
     } = this.props;
    
      
