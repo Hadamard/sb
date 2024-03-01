@@ -88,9 +88,11 @@ const LineChart = () => {
   network,
 }))
          
-class UserManagement extends PureComponent {
-    
-componentDidMount() {
+
+
+function App(props) {
+
+  componentDidMount() {
   const { dispatch } = this.props;
 
   dispatch({ type: 'user/fetch' });
@@ -108,28 +110,9 @@ componentDidMount() {
       channel: { channels }, 
 
     } = this.props;
-   
-     
-   
+
     console.log(this.props);
-
-    
-    return (
-      <div>
-      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
-    </div>
-    );
-  }
-}
-
-
-
-
-
-
-
-function App(props) {
-   console.log(props); 
+  
   return (
     <div className='App'>
      <head>
