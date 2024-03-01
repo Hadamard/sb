@@ -73,6 +73,8 @@ class UserLayout extends Component {
 
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '25px' }}>
 
+
+    <div style={{ marginRight: '20px' }}>
       <GoogleLogin 
         clientId={clientId}
         buttonText="Login with Google"
@@ -80,7 +82,9 @@ class UserLayout extends Component {
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
       />
+    </div>
 
+            
          <MicrosoftLogin clientId={"a71bc8d8-e3bd-4b9f-9c7a-654a2c8c4006"} authCallback={authHandler} />
         </div>
 
