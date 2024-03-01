@@ -2,25 +2,21 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
 
 
-@connect(({ network, node, user, organization, loading }) => ({
-  node,
-  user,
-  organization,
+@connect(({ network, loading }) => ({
   network,
+  loadingNetworks: loading.effects['network/listNetwork'],
 }))
          
 class UserManagement extends PureComponent {
     
+
   componentDidMount() {
     const { dispatch } = this.props;
 
-        dispatch({
+    dispatch({
       type: 'network/listNetwork',
-
     });
-   
   }
-
 
   render() {
     
