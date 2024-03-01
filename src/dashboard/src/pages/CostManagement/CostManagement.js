@@ -31,7 +31,7 @@ componentDidMount() {
      
    
     console.log(this.props);
-
+    console.log(user.currentUser.organization);
     
     return (
       <div>
