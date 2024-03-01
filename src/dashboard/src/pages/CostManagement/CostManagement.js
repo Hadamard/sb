@@ -20,12 +20,9 @@ class UserManagement extends PureComponent {
 
   render() {
     
-    const {
-      user: { users, pagination, currentUser },
-      organization: { organizations },
-      node: { nodes },
-      network: { networks },
-      dispatch,
+   const {
+      network: { networks, pagination },
+      loadingNetworks,
       intl,
     } = this.props;
    
