@@ -30,7 +30,7 @@ class UserManagement extends PureComponent {
    
 
    
-
+   console.log(data);
    console.log(networks);
 
     
