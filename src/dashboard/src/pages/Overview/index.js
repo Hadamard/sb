@@ -89,10 +89,9 @@ const LineChart = () => {
 }))
          
 
-
-  class App extends Component {
-
-  componentDidMount() {
+class UserManagement extends PureComponent {
+    
+componentDidMount() {
   const { dispatch } = this.props;
 
   dispatch({ type: 'user/fetch' });
@@ -110,10 +109,14 @@ const LineChart = () => {
       channel: { channels }, 
 
     } = this.props;
-
+   
+     
+   
     console.log(this.props);
-  
-  return (
+
+    
+    return (
+ 
     <div className='App'>
      <head>
 
@@ -243,5 +246,6 @@ const LineChart = () => {
   );
 }
 
+}
 
-export default App;
+export default injectIntl(UserManagement);
