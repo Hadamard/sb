@@ -156,7 +156,7 @@ componentDidMount() {
             
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">34</h3> <span className="d-block ms-2">Networks</span>
+                  <h3 className="mb-0">{networks.length}</h3> <span className="d-block ms-2">Networks</span>
                 </div>
                 <p className="fs-normal mb-0">Networks connected to your account</p>
               </div>
@@ -167,7 +167,7 @@ componentDidMount() {
              
               <div className="ms-3">
                 <div className="d-flex align-items-center">
-                  <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Channels</span>
+                  <h3 className="mb-0">{channels.length}</h3> <span className="d-block ms-2">Channels</span>
                 </div>
                 <p className="fs-normal mb-0">Channels connected to your account</p>
               </div>
