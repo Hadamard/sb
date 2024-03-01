@@ -32,10 +32,8 @@ class UserManagement extends PureComponent {
    
      
    
-   
-   console.log(users);
-   console.log(currentUser.username);
-   console.log(networks);
+    console.log(this.props);
+
     
     return (
       <div>
