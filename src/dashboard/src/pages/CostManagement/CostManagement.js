@@ -30,7 +30,11 @@ class UserManagement extends PureComponent {
     
     const {
       user: { users, pagination, currentUser },
-      
+      organization: { organizations },
+      node: { nodes },
+      network: { networks },
+      dispatch,
+      intl,
     } = this.props;
    
      
@@ -39,7 +43,6 @@ class UserManagement extends PureComponent {
    
    console.log(users);
    console.log(currentUser.username);
-   console.log(nodes);
    console.log(networks);
 
     
