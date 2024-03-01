@@ -1,12 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
 
-@connect(({ network, node, user, organization, loading }) => ({
-  node,
-  user,
-  organization,
-  network,
-}))
+@connect({ network, node, user, organization, loading });
+         
 class UserManagement extends PureComponent {
     
   componentDidMount() {
