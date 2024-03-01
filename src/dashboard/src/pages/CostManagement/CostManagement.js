@@ -16,6 +16,10 @@ class UserManagement extends PureComponent {
       type: 'user/fetch',
 
     });
+        dispatch({
+      type: 'network/listNetwork',
+
+    });
    
   }
 
