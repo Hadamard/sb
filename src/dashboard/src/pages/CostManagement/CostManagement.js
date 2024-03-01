@@ -1,7 +1,13 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
 
-@connect({ network, node, user, organization, loading });
+
+@connect(({ network, node, user, organization, loading }) => ({
+  node,
+  user,
+  organization,
+  network,
+}))
          
 class UserManagement extends PureComponent {
     
@@ -24,11 +30,7 @@ class UserManagement extends PureComponent {
     
     const {
       user: { users, pagination, currentUser },
-      organization: { organizations },
-      node: { nodes },
-      network: { networks },
-      dispatch,
-      intl,
+      
     } = this.props;
    
      
