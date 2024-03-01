@@ -490,6 +490,7 @@ class UserManagement extends PureComponent {
     } = this.props;
 
    console.log(this.props);
+   console.log(data);
     const data = users.map(user => ({
       ...user,
       disabled: user.username !== currentUser.username,
