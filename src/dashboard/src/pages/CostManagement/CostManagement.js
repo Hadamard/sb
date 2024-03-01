@@ -5,11 +5,7 @@ import { connect, injectIntl } from 'umi';
   node,
   user,
   organization,
-  loadingNodes: loading.effects['node/listNode'],
-  loadingUsers: loading.effects['user/fetch'],
-  creatingUser: loading.effects['user/createUser'],
   network,
-  loadingNetworks: loading.effects['network/listNetwork'],
 }))
 class UserManagement extends PureComponent {
     
