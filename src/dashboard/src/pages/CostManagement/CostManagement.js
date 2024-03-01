@@ -25,12 +25,8 @@ class UserManagement extends PureComponent {
     const {
       user: { users, pagination, currentUser },
       organization: { organizations },
-      loadingUsers,
       node: { nodes },
-      loadingNodes,
       network: { networks },
-      loadingNetworks,
-      creatingUser,
       dispatch,
       intl,
     } = this.props;
