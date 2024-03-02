@@ -13,7 +13,7 @@ class IframeComponent extends React.Component {
     
         <iframe
           title="Documentation Hadamard"
-          src="https://hadamard.com/documentation"
+          src="https://hadamard.com/c/docs"
           style={iframeStyle}
         />
       </div>
