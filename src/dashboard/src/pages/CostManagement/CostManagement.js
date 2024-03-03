@@ -358,13 +358,13 @@ class Organization extends PureComponent {
         }),
         render: (text, record) => (
           <Fragment>
-            <a onClick={() => this.showUpdate(record)}>
-              {intl.formatMessage({ id: 'form.menu.item.update', defaultMessage: 'Update' })}
+    <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM"
+  target="_blank"
+  rel="noopener noreferrer">
+              {intl.formatMessage({ id: 'form.menu.item.update', defaultMessage: 'Change Plan' })}
             </a>
             <Divider type="vertical" />
-            <a className={styles.danger} onClick={() => this.handleDelete(record)}>
-              {intl.formatMessage({ id: 'form.menu.item.delete', defaultMessage: 'Delete' })}
-            </a>
+           
           </Fragment>
         ),
       },
