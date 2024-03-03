@@ -31,11 +31,11 @@ componentDidMount() {
    
 
     return (
-      <div>
-     <a href="https://hadamard.com">
-      <button>Go to Destination</button>
-    </a>
-    </div>
+       <div>
+  <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM" target="_blank" rel="noopener noreferrer">
+    <button>Change Plan</button>
+  </a>
+</div>
     );
   }
 }
