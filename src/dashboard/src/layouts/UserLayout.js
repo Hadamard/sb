@@ -74,8 +74,9 @@ class UserLayout extends Component {
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '25px' }}>
 
 
-    <div style={{ marginRight: '20px' }}>
+    <div style={{ marginRight: '10px' }}>
       <GoogleLogin 
+        style={{ width: '200px',  height: '50px' }}
         clientId={clientId}
         buttonText="Login with Google"
         onSuccess={onSuccess}
@@ -85,7 +86,9 @@ class UserLayout extends Component {
     </div>
 
             
-         <MicrosoftLogin clientId={"a71bc8d8-e3bd-4b9f-9c7a-654a2c8c4006"} authCallback={authHandler} />
+         <MicrosoftLogin clientId={"a71bc8d8-e3bd-4b9f-9c7a-654a2c8c4006"} authCallback={authHandler} 
+            style={{ width: '200px',  height: '50px' }}
+            />
         </div>
 
 
