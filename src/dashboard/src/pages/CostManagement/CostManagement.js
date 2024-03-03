@@ -32,7 +32,7 @@ componentDidMount() {
 
     return (
       <div>
-     <a href="https://hadamard.com">
+     <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM">
       <button>Change Plan</button>
     </a>
     </div>
