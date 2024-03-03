@@ -1,7 +1,4 @@
 import React, { PureComponent, Fragment } from 'react';
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-import RedTable from '@/components/RedTable';
-import { PlusOutlined, TeamOutlined } from '@ant-design/icons';
 import { connect, injectIntl } from 'umi';
 @connect(({channel, network, node, user, loading }) => ({
   channel,
@@ -14,13 +11,11 @@ class UserManagement extends PureComponent {
     
 componentDidMount() {
   const { dispatch } = this.props;
-
   dispatch({ type: 'user/fetch' });
   dispatch({ type: 'network/listNetwork' });
   dispatch({ type: 'node/listNode' });
   dispatch({ type: 'channel/listChannel' });
 }
-
   render() {
     
     const {
@@ -28,20 +23,17 @@ componentDidMount() {
       node: { nodes },
       network: { networks },
       channel: { channels }, 
-
     } = this.props;
    
-  const MyButton = () => {
-  const redirectToUrl = (url) => {
-    window.location.href = url;
-  };
-   
+
+
     console.log(this.props);
+    console.log(user.currentUser.organization);
     console.log(currentUser.organization);
-    
+
     return (
       <div>
- 
+      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
     </div>
     );
   }
