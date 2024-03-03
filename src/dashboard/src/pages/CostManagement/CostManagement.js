@@ -66,14 +66,14 @@ class Organization extends PureComponent {
     const columns = [
       {
         title: intl.formatMessage({
-          id: 'app.organization.table.header.name',
+          id: 'app.cost.table.header.name',
           defaultMessage: 'Organization Name',
         }),
         dataIndex: 'name',
       },
       {
         title: intl.formatMessage({
-          id: 'app.organization.table.header.createTime',
+          id: 'app.cost.table.header.createTime',
           defaultMessage: 'Create Time',
         }),
         dataIndex: 'created_at',
@@ -112,7 +112,7 @@ class Organization extends PureComponent {
           <span>
             {<TeamOutlined style={{ marginRight: 15 }} />}
             {intl.formatMessage({
-              id: 'app.organization.title',
+              id: 'app.cost.title',
               defaultMessage: 'Organization Management',
             })}
           </span>
