@@ -1,5 +1,5 @@
 export default {
-  'app.organization.title': 'Organization Management',
+  'app.organization.title': 'Cost Management',
   'app.organization.table.header.name': 'Organization Name',
   'app.organization.table.header.createTime': 'Create Time',
   'app.organization.form.new.title': 'New Organization',
