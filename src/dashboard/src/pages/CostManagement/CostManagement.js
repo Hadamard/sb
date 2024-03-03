@@ -32,7 +32,9 @@ componentDidMount() {
 
     return (
       <div>
-      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
+     <a href="https://hadamard.com">
+      <button>Go to Destination</button>
+    </a>
     </div>
     );
   }
