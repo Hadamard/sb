@@ -135,7 +135,7 @@ class Organization extends PureComponent {
             />
           </div>
         </Card>
-        <CreateUpdateForm {...formProps} />
+      
       </PageHeaderWrapper>
     );
   }
