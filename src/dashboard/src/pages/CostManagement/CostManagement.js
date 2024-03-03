@@ -12,27 +12,7 @@ import styles from '../styles.less';
 
 const FormItem = Form.Item;
 
-const CreateUpdateForm = props => {
-  const {
-    visible,
-    method,
-    handleSubmit,
-    handleModalVisible,
-    confirmLoading,
-    organization,
-    intl,
-  } = props;
-  const [form] = Form.useForm();
-  const onSubmit = () => {
-    form.submit();
-  };
 
-  const onFinish = values => {
-    handleSubmit(method, values, organization);
-  };
-
-  return (
-   
 
 @connect(({ organization, loading }) => ({
   organization,
