@@ -16,7 +16,7 @@ import fabricCa from './zh-CN/fabric/ca';
 import Network from './zh-CN/Network';
 import Channel from './zh-CN/Channel';
 import ChainCode from './zh-CN/Chaincode';
-
+import CostManagement from './zh-CN/CostManagement';
 export default {
   'navBar.lang': '语言',
   'layout.user.link.help': '帮助',
