@@ -1,12 +1,20 @@
 import React, { PureComponent, Fragment } from 'react';
 import { connect, injectIntl } from 'umi';
+import { Card, Button, Form, Modal, Input, message, Divider } from 'antd';
+import { PlusOutlined, TeamOutlined } from '@ant-design/icons';
+import moment from 'moment';
+import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+import RedTable from '@/components/RedTable';
+import styles from '../styles.less';
+
 @connect(({channel, network, node, user, loading }) => ({
   channel,
   node,
   user,
   network,
 }))
-         
+
+  
 class UserManagement extends PureComponent {
     
 componentDidMount() {
@@ -32,7 +40,35 @@ componentDidMount() {
 
     return (
       <div>
-     <a href="https://hadamard.com">
+     
+       <PageHeaderWrapper
+        title={
+          <span>
+            {<TeamOutlined style={{ marginRight: 15 }} />}
+            {intl.formatMessage({
+              id: 'app.organization.title',
+              defaultMessage: 'Organization Management',
+            })}
+          </span>
+        }
+      >
+        <Card bordered={false}>
+          <div className={styles.tableList}>
+        
+            <RedTable
+         
+              data={{
+      
+              }}
+          
+            />
+          </div>
+        </Card>
+      
+      </PageHeaderWrapper>
+      
+      
+      <a href="https://hadamard.com">
       <button>Go to Destination</button>
     </a>
     </div>
