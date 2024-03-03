@@ -41,11 +41,7 @@ componentDidMount() {
     return (
       <div>
      
-       <PageHeaderWrapper
-        title={
-         
-        }
-      >
+     
         <Card bordered={false}>
           <div className={styles.tableList}>
         
@@ -59,7 +55,7 @@ componentDidMount() {
           </div>
         </Card>
       
-      </PageHeaderWrapper>
+      
       
       
       <a href="https://hadamard.com">
