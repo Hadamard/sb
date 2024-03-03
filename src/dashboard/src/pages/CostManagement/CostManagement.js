@@ -278,16 +278,7 @@ class Organization extends PureComponent {
     });
   };
 
-  deleteOrganization = (record, callback = this.deleteCallback) => {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'organization/deleteOrganization',
-      payload: {
-        ...record,
-      },
-      callback,
-    });
-  };
+  
 
   showUpdate = record => {
     const { handleModalVisible } = this;
@@ -302,27 +293,7 @@ class Organization extends PureComponent {
     );
   };
 
-  handleDelete = record => {
-    const { intl } = this.props;
-    Modal.confirm({
-      title: intl.formatMessage({
-        id: 'app.organization.form.delete.title',
-        defaultMessage: 'Delete Organization',
-      }),
-      content: intl.formatMessage(
-        {
-          id: 'app.organization.form.delete.content',
-          defaultMessage: 'Confirm to delete organization {name}',
-        },
-        {
-          name: record.name,
-        }
-      ),
-      okText: intl.formatMessage({ id: 'form.button.confirm', defaultMessage: 'Confirm' }),
-      cancelText: intl.formatMessage({ id: 'form.button.cancel', defaultMessage: 'Cancel' }),
-      onOk: () => this.deleteOrganization(record),
-    });
-  };
+  
 
   render() {
     const { selectedRows, modalVisible, modalMethod, currentOrganization } = this.state;
