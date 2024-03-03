@@ -1,17 +1,7 @@
 export default {
-  'app.organization.title': 'Cost Management',
-  'app.organization.table.header.name': 'Organization Name',
-  'app.organization.table.header.createTime': 'Create Time',
-  'app.organization.form.new.title': 'New Organization',
-  'app.organization.form.update.title': 'Update Organization',
-  'app.organization.form.name.label': 'Organization Name',
-  'app.organization.form.name.required': 'Please input organization name',
-  'app.organization.create.success': 'Create organization {name} success',
-  'app.organization.create.fail': 'Create organization {name} failed',
-  'app.organization.update.success': 'Update organization {name} success',
-  'app.organization.update.fail': 'Update organization {name} failed',
-  'app.organization.form.delete.title': 'Delete Organization',
-  'app.organization.form.delete.content': 'Confirm to delete organization {name}',
-  'app.organization.delete.fail': 'Delete Organization {name} failed',
-  'app.organization.delete.success': 'Delete Organization {name} success',
+  'app.cost.title': 'Cost Management',
+  'app.cost.table.header.name': 'Organization Name',
+  'app.cost.table.header.createTime': 'Current Plan',
+
+ 
 };
