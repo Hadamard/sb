@@ -18,4 +18,5 @@ export default {
   'form.button.back': '返回',
   'form.button.prev': '上一步',
   'form.button.next': '下一步',
+  'form.menu.item.plan': '的中文翻译是 "更改计划"',
 };
