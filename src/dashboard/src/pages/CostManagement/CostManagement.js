@@ -28,8 +28,7 @@ componentDidMount() {
 
 
     console.log(this.props);
-    console.log(user.currentUser.organization);
-    console.log(currentUser.organization);
+   
 
     return (
       <div>
