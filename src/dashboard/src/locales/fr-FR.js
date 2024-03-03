@@ -16,6 +16,7 @@ import fabricCa from './fr-FR/fabric/ca';
 import Network from './fr-FR/Network';
 import Channel from './fr-FR/Channel';
 import ChainCode from './fr-FR/Chaincode';
+import CostManagement from './fr-FR/CostManagement';
 
 export default {
   'navBar.lang': 'Languages',
