@@ -1,4 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
+import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+import RedTable from '@/components/RedTable';
 import { connect, injectIntl } from 'umi';
 @connect(({channel, network, node, user, loading }) => ({
   channel,
@@ -35,7 +37,19 @@ componentDidMount() {
     
     return (
       <div>
-      {/* Hier können Inhalte hinzugefügt werden, wenn benötigt */}
+      <PageHeaderWrapper
+        title={
+          <span>
+            {<TeamOutlined style={{ marginRight: 15 }} />}
+            {intl.formatMessage({
+              id: 'app.organization.title',
+              defaultMessage: 'Organization Management',
+            })}
+          </span>
+        }
+      >
+     
+      </PageHeaderWrapper>
     </div>
     );
   }
