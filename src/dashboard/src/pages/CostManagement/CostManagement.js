@@ -9,11 +9,7 @@ import moment from 'moment';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import RedTable from '@/components/RedTable';
 import styles from '../styles.less';
-
 const FormItem = Form.Item;
-
-
-
 @connect(({ organization, loading }) => ({
   organization,
   loadingOrganizations: loading.effects['organization/listOrganization'],
@@ -27,31 +23,22 @@ class Organization extends PureComponent {
     formValues: {},
     currentOrganization: {},
   };
-
   componentDidMount() {
     const { dispatch } = this.props;
-
     dispatch({
       type: 'organization/listOrganization',
     });
   }
-
   componentWillUnmount() {
     const { dispatch } = this.props;
-
     dispatch({
       type: 'organization/clear',
     });
   }
-
-
  
  
   
-
-
   
-
   render() {
     const { selectedRows, modalVisible, modalMethod, currentOrganization } = this.state;
     const {
@@ -60,20 +47,18 @@ class Organization extends PureComponent {
       creatingOrganization,
       intl,
     } = this.props;
-
-
    
     const columns = [
       {
         title: intl.formatMessage({
-          id: 'app.cost.table.header.name',
+          id: 'app.organization.table.header.name',
           defaultMessage: 'Organization Name',
         }),
         dataIndex: 'name',
       },
       {
         title: intl.formatMessage({
-          id: 'app.cost.table.header.createTime',
+          id: 'app.organization.table.header.createTime',
           defaultMessage: 'Create Time',
         }),
         dataIndex: 'created_at',
@@ -92,10 +77,7 @@ class Organization extends PureComponent {
               {intl.formatMessage({ id: 'form.menu.item.update', defaultMessage: 'Change Plan' })}
             </a>
             <Divider type="vertical" />
-            <a className={styles.danger} href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM"
-  target="_blank">
-              {intl.formatMessage({ id: 'form.menu.item.delete', defaultMessage: 'Delete' })}
-            </a>
+           
           </Fragment>
         ),
       },
@@ -115,7 +97,7 @@ class Organization extends PureComponent {
           <span>
             {<TeamOutlined style={{ marginRight: 15 }} />}
             {intl.formatMessage({
-              id: 'app.cost.title',
+              id: 'app.organization.title',
               defaultMessage: 'Organization Management',
             })}
           </span>
@@ -138,10 +120,10 @@ class Organization extends PureComponent {
             />
           </div>
         </Card>
-      
+
+
       </PageHeaderWrapper>
     );
   }
 }
-
 export default injectIntl(Organization);
