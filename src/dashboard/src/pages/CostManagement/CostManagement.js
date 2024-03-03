@@ -74,7 +74,7 @@ class Organization extends PureComponent {
     <a href="https://billing.stripe.com/p/login/aEU2bs5DY0Sva2ccMM"
   target="_blank"
   rel="noopener noreferrer">
-              {intl.formatMessage({ id: 'form.menu.item.update', defaultMessage: 'Change Plan' })}
+              {intl.formatMessage({ id: 'form.menu.item.plan', defaultMessage: 'Change Plan' })}
             </a>
             <Divider type="vertical" />
            
