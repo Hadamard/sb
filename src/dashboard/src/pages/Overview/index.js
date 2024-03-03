@@ -117,9 +117,13 @@ componentDidMount() {
   const startDate = new Date('2024-01-01');
   const currentDate = new Date();
   const differenceInTime = currentDate.getTime() - startDate.getTime();
-  const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
 
-    
+  // Berechne Tage, Stunden, Minuten und Sekunden
+  const days = Math.floor(differenceInTime / (1000 * 3600 * 24));
+  const hours = Math.floor((differenceInTime % (1000 * 3600 * 24)) / (1000 * 3600));
+  const minutes = Math.floor((differenceInTime % (1000 * 3600)) / (1000 * 60));
+  
+
     
     return (
  
@@ -231,8 +235,8 @@ componentDidMount() {
           <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
             <div className="box bg-warning p-3">
              
-              <h3>{ differenceInDays }</h3>
-              <p className="lead">Active days</p>
+              <h3>d{ days } h{ hours } m{ minutes }</h3>
+              <p className="lead">Active since</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
