@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import RedTable from '@/components/RedTable';
+import { PlusOutlined, TeamOutlined } from '@ant-design/icons';
 import { connect, injectIntl } from 'umi';
 @connect(({channel, network, node, user, loading }) => ({
   channel,
@@ -30,7 +31,10 @@ componentDidMount() {
 
     } = this.props;
    
-     
+  const MyButton = () => {
+  const redirectToUrl = (url) => {
+    window.location.href = url;
+  };
    
     console.log(this.props);
     console.log(currentUser.organization);
@@ -43,12 +47,14 @@ componentDidMount() {
             {<TeamOutlined style={{ marginRight: 15 }} />}
             {intl.formatMessage({
               id: 'app.organization.title',
-              defaultMessage: 'Organization Management',
+              defaultMessage: 'Cost Management',
             })}
           </span>
         }
       >
-     
+      <button onClick={() => redirectToUrl('/destination-url')}>
+      Go to Destination
+    </button>
       </PageHeaderWrapper>
     </div>
     );
