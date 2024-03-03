@@ -43,13 +43,7 @@ componentDidMount() {
      
        <PageHeaderWrapper
         title={
-          <span>
-            {<TeamOutlined style={{ marginRight: 15 }} />}
-            {intl.formatMessage({
-              id: 'app.organization.title',
-              defaultMessage: 'Organization Management',
-            })}
-          </span>
+         
         }
       >
         <Card bordered={false}>
