@@ -130,38 +130,7 @@ class Organization extends PureComponent {
     });
   };
 
-  createCallback = data => {
-    const { name } = data.payload;
-    const { intl } = this.props;
-    if (data.id) {
-      message.success(
-        intl.formatMessage(
-          {
-            id: 'app.organization.create.success',
-            defaultMessage: 'Create organization {name} success',
-          },
-          {
-            name,
-            id: data.id,
-          }
-        )
-      );
-      this.handleModalVisible();
-      this.handleFormReset();
-    } else {
-      message.error(
-        intl.formatMessage(
-          {
-            id: 'app.organization.create.fail',
-            defaultMessage: 'Create organization {name} failed',
-          },
-          {
-            name,
-          }
-        )
-      );
-    }
-  };
+
 
  
   deleteCallback = data => {
