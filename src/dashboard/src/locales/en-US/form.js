@@ -18,4 +18,5 @@ export default {
   'form.button.back': 'Back',
   'form.button.prev': 'Prev',
   'form.button.next': 'Next',
+  'form.menu.item.plan': 'Change plan',
 };
