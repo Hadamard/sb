@@ -41,21 +41,7 @@ componentDidMount() {
     
     return (
       <div>
-      <PageHeaderWrapper
-        title={
-          <span>
-            {<TeamOutlined style={{ marginRight: 15 }} />}
-            {intl.formatMessage({
-              id: 'app.organization.title',
-              defaultMessage: 'Cost Management',
-            })}
-          </span>
-        }
-      >
-      <button onClick={() => redirectToUrl('/destination-url')}>
-      Go to Destination
-    </button>
-      </PageHeaderWrapper>
+ 
     </div>
     );
   }
