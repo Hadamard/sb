@@ -15,5 +15,6 @@ export default {
   'form.button.back': 'Zurück',
   'form.button.prev': 'Zurück',
   'form.button.next': 'Weiter',
+  'form.menu.item.plan': 'Plan ändern',
 };
 
