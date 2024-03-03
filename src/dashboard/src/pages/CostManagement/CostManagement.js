@@ -32,55 +32,7 @@ const CreateUpdateForm = props => {
   };
 
   return (
-    <Modal
-      destroyOnClose
-      title={intl.formatMessage({
-        id: `app.organization.form.${method === 'create' ? 'new' : 'update'}.title`,
-        defaultMessage: 'New Organization',
-      })}
-      visible={visible}
-      confirmLoading={confirmLoading}
-      width="50%"
-      onOk={onSubmit}
-      onCancel={() => handleModalVisible()}
-    >
-      <Form
-        form={form}
-        onFinish={onFinish}
-        initialValues={{
-          name: method === 'create' ? '' : organization.name,
-        }}
-      >
-        <FormItem
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 15 }}
-          label={intl.formatMessage({
-            id: 'app.organization.form.name.label',
-            defaultMessage: 'Organization Name',
-          })}
-          name="name"
-          rules={[
-            {
-              required: true,
-              message: intl.formatMessage({
-                id: 'app.organization.form.name.required',
-                defaultMessage: 'Please input organization name',
-              }),
-              min: 1,
-            },
-          ]}
-        >
-          <Input
-            placeholder={intl.formatMessage({
-              id: 'form.input.placeholder',
-              defaultMessage: 'Please input',
-            })}
-          />
-        </FormItem>
-      </Form>
-    </Modal>
-  );
-};
+   
 
 @connect(({ organization, loading }) => ({
   organization,
@@ -112,123 +64,11 @@ class Organization extends PureComponent {
     });
   }
 
-  handleModalVisible = visible => {
-    if (!visible) {
-      this.setState({
-        modalMethod: 'create',
-        currentOrganization: {},
-      });
-    }
-    this.setState({
-      modalVisible: !!visible,
-    });
-  };
-
-  handleSelectRows = rows => {
-    this.setState({
-      selectedRows: rows,
-    });
-  };
-
-
 
  
-  deleteCallback = data => {
-    const { code, payload } = data;
-    const { intl } = this.props;
-    const { name } = payload;
-    if (code) {
-      message.error(
-        intl.formatMessage(
-          {
-            id: 'app.organization.delete.fail',
-            defaultMessage: 'Delete organization {name} failed',
-          },
-          {
-            name,
-          }
-        )
-      );
-    } else {
-      message.success(
-        intl.formatMessage(
-          {
-            id: 'app.organization.delete.success',
-            defaultMessage: 'Delete organization {name} success',
-          },
-          {
-            name,
-          }
-        )
-      );
-      this.handleFormReset();
-    }
-  };
-
-  handleSubmit = (method, values, record) => {
-    const { dispatch } = this.props;
-    switch (method) {
-      case 'create':
-        dispatch({
-          type: 'organization/createOrganization',
-          payload: values,
-          callback: this.createCallback,
-        });
-        break;
-      case 'update':
-        dispatch({
-          type: 'organization/updateOrganization',
-          payload: {
-            ...values,
-            id: record.id,
-          },
-          callback: this.updateCallback,
-        });
-        break;
-      default:
-        break;
-    }
-  };
-
-  handleFormReset = () => {
-    const { dispatch } = this.props;
-    this.setState({
-      formValues: {},
-    });
-    dispatch({
-      type: 'organization/listOrganization',
-    });
-  };
-
-  handleTableChange = pagination => {
-    const { dispatch } = this.props;
-    const { formValues } = this.state;
-    const { current, pageSize } = pagination;
-    const params = {
-      page: current,
-      per_page: pageSize,
-      ...formValues,
-    };
-    dispatch({
-      type: 'organization/listOrganization',
-      payload: params,
-    });
-  };
-
+ 
   
 
-  showUpdate = record => {
-    const { handleModalVisible } = this;
-    this.setState(
-      {
-        currentOrganization: record,
-        modalMethod: 'update',
-      },
-      () => {
-        handleModalVisible(true);
-      }
-    );
-  };
 
   
 
