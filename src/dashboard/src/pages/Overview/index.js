@@ -122,7 +122,7 @@ componentDidMount() {
   const days = Math.floor(differenceInTime / (1000 * 3600 * 24));
   const hours = Math.floor((differenceInTime % (1000 * 3600 * 24)) / (1000 * 3600));
   const minutes = Math.floor((differenceInTime % (1000 * 3600)) / (1000 * 60));
-  
+  const seconds = Math.floor((differenceInTime % (1000 * 60)) / 1000);
 
     
     return (
@@ -235,7 +235,7 @@ componentDidMount() {
           <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
             <div className="box bg-warning p-3">
              
-              <h3>d{ days } h{ hours } m{ minutes }</h3>
+              <h3>{ days }D { hours }H { minutes }m { seconds }s</h3>
               <p className="lead">Active since</p>
             </div>
           </div>
