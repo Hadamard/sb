@@ -20,16 +20,14 @@ class IframeComponent extends React.Component {
       display: this.state.loading ? 'none' : 'block' // optional: removes iframe border
     };
 
-     const loadingStyle = {
-     fontSize: '40px',
+const loadingTextStyle = {
+     fontSize: '30px',
       color: 'white' ,
     };
     
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        <div style={loadingStyle}>
-          <div>Loading ...</div>
-        </div>
+       {this.state.loading && <div style={loadingTextStyle}>Loading ...</div>}
         <iframe
           title="Documentation Hadamard"
           onLoad={this.handleLoad}
