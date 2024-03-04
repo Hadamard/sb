@@ -5,14 +5,23 @@ class IframeComponent extends React.Component {
     const iframeStyle = {
       width: '100%',
       height: '100%',
-      border: 'none' // optional: removes iframe border
+      border: 'none',
+      display: loading ? 'none' : 'block'// optional: removes iframe border
     };
 
+  const IframeComponent = () => {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoad = () => {
+    setLoading(false);
+  };
+    
     return (
       <div style={{ width: '100%', height: '100%' }}>
     
         <iframe
           title="Documentation Hadamard"
+          onLoad={handleLoad}
           src="https://hadamard.com/c/docs"
           style={iframeStyle}
         />
