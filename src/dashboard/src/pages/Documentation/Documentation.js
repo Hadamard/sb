@@ -9,7 +9,6 @@ class IframeComponent extends React.Component {
       display: loading ? 'none' : 'block'// optional: removes iframe border
     };
 
-  const IframeComponent = () => {
   const [loading, setLoading] = useState(true);
 
   const handleLoad = () => {
