@@ -20,9 +20,22 @@ class IframeComponent extends React.Component {
       display: this.state.loading ? 'none' : 'block' // optional: removes iframe border
     };
 
+     const loadingStyle = {
+      display: this.state.loading ? 'flex' : 'none',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      backgroundColor: 'rgba(255, 255, 255, 0.5)', // Semi-transparent white background
+      zIndex: 9999 // Ensure it's above the iframe
+    };
+    
     return (
       <div style={{ width: '100%', height: '100%' }}>
-        {this.state.loading && <div>Ladebalken hier...</div>}
+        <div style={loadingStyle}>
+          <div>Loading ...</div>
+        </div>
         <iframe
           title="Documentation Hadamard"
           onLoad={this.handleLoad}
