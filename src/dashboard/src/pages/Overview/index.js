@@ -103,7 +103,10 @@ componentDidMount() {
   render() {
     
     const {
-
+      user: { users, pagination, currentUser },
+      node: { nodes },
+      network: { networks },
+      channel: { channels }, 
 
     } = this.props;
    
