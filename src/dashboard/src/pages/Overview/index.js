@@ -114,6 +114,44 @@ componentDidMount() {
    
     console.log(this.props);
 
+
+
+  useEffect(() => {
+    const fetchNetworkData = async () => {
+      try {
+        const response = await fetch('http://194.164.50.94:8000/');
+        if (!response.ok) {
+          throw new Error('Network request failed');
+        }
+        const data = await response.json();
+        console.log('Network data:', data);
+      } catch (error) {
+        console.error('Error fetching network data:', error);
+      }
+    };
+
+    fetchNetworkData();
+    
+    // Refresh network data every minute
+    const intervalId = setInterval(fetchNetworkData, 10000);
+
+
+
+
+
+
+
+    
+  const startDate = new Date('2024-01-01');
+  const currentDate = new Date();
+  const differenceInTime = currentDate.getTime() - startDate.getTime();
+
+  // Berechne Tage, Stunden, Minuten und Sekunden
+  const days = Math.floor(differenceInTime / (1000 * 3600 * 24));
+  const hours = Math.floor((differenceInTime % (1000 * 3600 * 24)) / (1000 * 3600));
+  const minutes = Math.floor((differenceInTime % (1000 * 3600)) / (1000 * 60));
+  const seconds = Math.floor((differenceInTime % (1000 * 60)) / 1000);
+
     
     return (
  
@@ -225,8 +263,8 @@ componentDidMount() {
           <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
             <div className="box bg-warning p-3">
              
-              <h3>57 days</h3>
-              <p className="lead">Active</p>
+              <h3>{ days }D { hours }H { minutes }m { seconds }s</h3>
+              <p className="lead">Active since</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-3">
