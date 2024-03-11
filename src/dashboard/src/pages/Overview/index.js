@@ -119,7 +119,7 @@ componentDidMount() {
 
     const fetchNetworkData = async () => {
       try {
-        const response = await fetch('http://194.164.50.94:8000/');
+        const response = await fetch('http://localhost:5000');
         if (!response.ok) {
           throw new Error('Network request failed');
         }
