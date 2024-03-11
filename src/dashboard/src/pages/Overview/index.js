@@ -117,30 +117,6 @@ componentDidMount() {
 
 
 
-    const fetchNetworkData = async () => {
-      try {
-        const response = await fetch('http://194.164.50.94:8000/');
-        if (!response.ok) {
-          throw new Error('Network request failed');
-        }
-        const data = await response.json();
-        console.log('Network data:', data);
-      } catch (error) {
-        console.error('Error fetching network data:', error);
-      }
-    };
-
-    fetchNetworkData();
-    
-    // Refresh network data every minute
-    const intervalId = setInterval(fetchNetworkData, 10000);
-
-
-
-
-
-
-
     
   const startDate = new Date('2024-01-01');
   const currentDate = new Date();
