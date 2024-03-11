@@ -29,7 +29,7 @@ def get_network_traffic():
             "packets_recv": packets_recv
         }
 
-@app.route('/network_traffic', methods=['GET'])
+@app.route('/', methods=['GET'])
 def network_traffic():
     return jsonify(get_network_traffic())
 
