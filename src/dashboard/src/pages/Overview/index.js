@@ -94,7 +94,7 @@ class UserManagement extends PureComponent {
 componentDidMount() {
   const { dispatch } = this.props;
 
-  dispatch({ type: 'user/fetch' });
+ 
   dispatch({ type: 'network/listNetwork' });
   dispatch({ type: 'node/listNode' });
   dispatch({ type: 'channel/listChannel' });
