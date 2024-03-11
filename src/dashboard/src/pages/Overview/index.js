@@ -117,25 +117,6 @@ componentDidMount() {
 
 
 
-fetch('/trans')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Fehler beim Abrufen der Daten von der API.');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Fehler:', error);
-  });
-
-
-
-
-
-
 
     
   const startDate = new Date('2024-01-01');
