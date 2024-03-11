@@ -117,23 +117,19 @@ componentDidMount() {
 
 
 
-    const fetchNetworkData = async () => {
-      try {
-        const response = await fetch('https://hyperledger.hadamard.com:5000');
-        if (!response.ok) {
-          throw new Error('Network request failed');
-        }
-        const data = await response.json();
-        console.log('Network data:', data);
-      } catch (error) {
-        console.error('Error fetching network data:', error);
-      }
-    };
-
-    fetchNetworkData();
-    
-    // Refresh network data every minute
-    const intervalId = setInterval(fetchNetworkData, 10000);
+fetch('/trans')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Fehler beim Abrufen der Daten von der API.');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Fehler:', error);
+  });
 
 
 
